@@ -1,2 +1,29 @@
 
+https://www.w3schools.com/jsref/met_win_alert.asp ---------------- w3school에 활용도 잘 커리큘럼 나열되어 있어서 참고하면 좋습니다.
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/%EC%86%8C%EA%B0%9C#What_is_JavaScript.3F  모질라재단 자바스크립트 참고로 좋습니다.
+
 HTML은 움직이지 않는다 난 움직이게 하고싶다 JavaScript 
+
+이벤트 사용 --웹브라우저에서 위에서 일어나는 일 
+
+1번 ---- 스크립트 함수로 만들고 
+<script type="text/javascript">
+function alarm() {                       
+	alert("알람창 입니다.");
+}
+</script>
+<button onclick="alarm()">버튼</button>
+
+2번 ---- HTML Event Attribute  
+<input type="button" value="버튼" onclick="alert('2번쨰방식')">
+
+
+@자바스크립트 데이터 타입 ----From 모질라 재단 내용 인용 
+
+Boolean
+Null
+Undefined
+Number
+String(문자열)
+Symbol(new in ECMAScript 6)
+and Object(객체)                         
