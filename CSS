@@ -1,0 +1,15 @@
+웹페이지 안에 CSS삽입 하는 방법 
+
+1.스타일 태그를 쓴다.
+<style>
+ a{
+  color:blue;
+ }
+</style>
+
+2.스타일 속성을 쓴다.
+<body>
+<ul>
+  <li><a href="" style="color:red">1번 항목</li>
+  <li><a href="">2번 항목</li>
+</ul>
