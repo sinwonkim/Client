@@ -1,0 +1,12 @@
+함수(function)는 리펙토링에서 중요한 위치를 차지한다.
+
+입력  Parameter & Argument 매개변수
+출력  Return
+
+객체(Object) 
+
+함수라는 기반위에 객체라는 것이 존재함 
+객체 특성, 존재이유 
+
+배열을 만들때  var emotion = ['','']; 대괄호  
+객체를 만들때  var emotion = {}   중괄호
