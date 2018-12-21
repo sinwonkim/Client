@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Function</h1>
+	<h2>Basic</h2>
+
+		<script>
+			document.write('<ul>');	
+			function two(){
+				document.write('<li>2-1</li>');
+				document.write('<li>2-2</li>');
+			}
+			document.write('<li>1</li>');
+			two();
+			document.write('<li>3</li>');
+			two();		
+			document.write('</ul>');
+		</script>
+		<h2>Parameter and Argument</h2>
+		<script>
+			document.write(1+1+'<br>');
+		</script>
+		<script>
+		function onePlusOne(){
+		  document.write(1+1+'<br>');
+		}
+		function sum(left, right){
+			document.write(left+right+'<br>');
+		}
+		function sumColorBlue(left,right){
+			document.write('<div style="color:red">'+left+right+'</div>');
+		}
+		onePlusOne();
+		sum(2,3); 
+		sumColorBlue(4,5);
+		</script>
+		<h2>Return</h2>
+		<script>
+			function sum2(left,right){
+				return left+right;
+			}
+		document.write(sum2(2,3)+'<br>');
+		document.write('<div style="color:red">'+sum2(4,5)+'</div>');
+		document.write('<div style="font-size:3rem;">'+sum2(4,5)+'</div>');
+		</script>
+		
+</body>
+</html>

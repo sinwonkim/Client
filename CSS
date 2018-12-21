@@ -1,0 +1,45 @@
+웹페이지 안에 CSS삽입 하는 방법 
+
+1.스타일 태그(Element)를 쓴다.               
+<style>
+ a{             --------------  태그(Element) 선택자(Selectors) 
+  color:blue;
+ }
+ .saw{        -------------------- 클래스 선택자  . 
+  color:blue;
+ }
+ 
+ 
+ #active{    -----------------id를 선택하려면 # 으로 선택한다   class보다 id로 지정한게 효과가 먹힌다 결국 id값으로 지정해놓은게 class보단  
+  color:blue;                  상위라고 생각하면 편하다.
+ }
+ 
+ .active { -------------------  a태그로 묶어진  2번 항목이란 글자는 색깔이 red로 지정될 것이다.  Why?
+  color:red;                    가장 최근에 명령한 구문이라
+ }
+ 
+</style>
+
+선택자(Selectors) 우선순위
+태그 선택자 < 클래스 선택자 < id 선택자(유일무의)
+다 클래스 선택자라 한다면 맨 마지막에 명령한 게 적용 된다.
+
+ 
+
+
+2.스타일 속성을 쓴다.
+<body>
+<ul>
+  <li><a href="" style="color:red">1번 항목</li>
+  <li><a href="" class="saw active">2번 항목</li> -------------- 클래스라고 하는 속성에는 여러 값이 들어 올 수 있고 띄어쓰기로 구분
+                                                                 saw 클래스와 active 클래스 
+                                                                 
+  <li><a href="" class="saw" id="active">2번 항목</li>                                                               
+                                                                 
+</ul>                                                
+
+CSS의 KeyWord
+
+1.Property 효과
+2.선택자
+

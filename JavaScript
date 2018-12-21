@@ -1,0 +1,63 @@
+
+https://www.w3schools.com/jsref/met_win_alert.asp ---------------- w3school에 활용도 잘 커리큘럼 나열되어 있어서 참고하면 좋습니다.
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/%EC%86%8C%EA%B0%9C#What_is_JavaScript.3F  모질라재단 자바스크립트 참고로 좋습니다.
+
+
+@ 인터페이스 document 
+
+자바스크립트로 문서에 필요한 내용을 표시할려면 
+document는 문서를 의미하는 객체(object)이고 
+write()는 메소드(method)이다.
+
+document.write(1+1);        console:   2
+document.write(1+"1");      console :  11
+document.write('<h1>h1태그적용<h1>')  console :  h1크기가 적용됨     HTML 태그도 넣을 수 있다.
+
+각각의 웹 페이지는 자신의 문서(document)객체를 갖는다 
+Document 인터페이스는 웹 페이지의 컨텐츠(DOM 트리,즉)
+<body>또는 <table>와 같은 요소(Element)등)에 대한 
+진입점으로서의 역할을 하며, 또한 해당 문서에 대한 전역
+기능(페이지의 URL 가져오기,문서 내에 새 요소 생성
+하기 등)을 제공한다. 
+문서 객체는 다음과 같은 여러 API를 통해 얻을 수 있다.
+가장 일반적인 방법으로는 문서 내 실행되는 스크립트(script)
+에서 document를 사용한다.
+iframe의 contentDocument 프로퍼티를 사용하여 그 iframe에
+속한 문서 객체를 얻는다.
+프로퍼티 
+Document.all 
+어떤 id를 갖는 모든 요소를 넘겨준다. 이것은 레거시 비표준
+인터페이스므로 이것 대신 Document.getElementById()
+메소드를 사용하여야 한다. 
+XMLHttpRequest 객체의 responseXML를 사용한다.
+이벤트 사용 --웹브라우저에서 위에서 일어나는 일 
+
+
+
+@HTML은 움직이지 않는다 난 움직이게 하고싶다 JavaScript 
+1번 ---- 스크립트 함수로 만들고 
+<script type="text/javascript">
+function alarm() {                       
+	alert("알람창 입니다.");
+}
+</script>
+<button onclick="alarm()">버튼</button>
+
+2번 ---- HTML Event Attribute  
+<input type="button" value="버튼" onclick="alert('2번쨰방식')">
+
+
+
+
+@자바스크립트 데이터 타입 ----From 모질라 재단 내용 인용 
+
+Boolean
+Null
+Undefined
+Number
+String(문자열)
+Symbol(new in ECMAScript 6)
+and Object(객체)                         
+
+
+
