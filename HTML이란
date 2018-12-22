@@ -109,3 +109,81 @@ But 이러한 Style속성을 이용한 방법은 단 하나의 HTML요소(Attrib
 ex)<h1 style="background-color:white"></h1>  -- 배경색  
    <h1 style="color:maroon"></h1>  -- 글자색 변경
 
+글자 크기 변경 
+<h1 style="font-size:250%">style 속성 크기 변환</h1>
+
+문단 정렬 변경 
+<h1 style="text-align:center">
+  style 속성을 이용한 문단 정렬 변경 
+</h1>
+
+다중 style 속성 사용하여 여러 CSS스타일 한번에 적용   배경색깔,크기변경,정렬변경 등
+<h1 style="background-color:white; font-size:100px; text-align:center">다중적용</h1>
+
+style 속성값에 사용되는 CSS속성(property)과 속성값들은 세미콜론(;)을 이용하여 구분 
+CSS 속성을 하나만 사용할 때나, 여러 개의 CSS 속성 중 마지막 CSS속성은 세미콜론(;)을 생략할 수 있다.
+
+HTML 색(Color)표현
+HTML에서 색을 표현하는 방법
+1.색상 이름으로 표현
+2.RGB 색상값으로 표현
+3.16진수 
+
+HTML배경(Background)
+HTML문서의 기본 배경(background)은 흰색입니다.
+또한,HTML 요소들도 각자 자신만의 배경을 가지고 있음 
+
+HTML에서는 이러한 배경을 다음과 같이 변경할 수 있음 
+HTML5 이전까지는 bgcolor속성을 이용하여 HTML 요소의 배경색을 다른 색으로 변경할 수 있었다. 하지만 
+HTML5부터는 BGCOLOR속성을 더 이상 지원X ,CSS를 이용하여 배경색을 변경하도록 하고 있다.
+
+CSS스타일을 이용하여 배경색을 다른 색으로 변경하는 예제
+<style>
+  body {background-color:lightblue; }   태그셀렉 {}
+</style>
+
+배경을 다른 이미지로 변경 
+background속성을 이용하면 HTML요소의 배경을 이미지(image)로 설정할 수 있다. 
+<태그이름 background="이미지주소">
+배경으로 이미지를 사용하면 웹 페이지의 로딩시간이 증가하게 된다. 
+따라서 보통은 작은 사이지의 이미지를 패턴으로 만들어 배경 이미지로 반복 설정한다고 한다.
+
+<style>
+body {
+	background-image: url(./imgs/tr1.jpg);
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: 1550px 1000px, cover;
+}
+</style>
+
+HTML링크(Link)
+웹페지에서 다른 페이지나 다른 사이트로 연결되는 수많은 하이퍼 링크가 존재함 
+이러한 하이퍼 링크를 간단히 링크라고도 부르며, HTML에서는 <a>태그로 표현함 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+이 내용은 TCP스쿨 내용을 보고 개인적으로 정리한 내용 입니다. 
+   
+
