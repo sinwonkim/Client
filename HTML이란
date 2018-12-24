@@ -268,7 +268,10 @@ HTML5에서 제공하는 레아이웃만을 위한 의미(semantic)요소는 다
 <article> HTML 문서에서  하나의 글(article)부분을 정의함
 <aside>  HTML문서에서 페이지 부분 이외의 콘텐츠(content)를 정의함
 <footer> HTML문서나 섹션(section)부분에 대한 푸터(footer)를 정의함.
-                   
+
+table 요소를 이용한 레이아웃 
+table요소를 이용하여 레이아웃을 작성하는 방법은 오래전에 사용하던 방식 잘 사용 
+
 
 
 
