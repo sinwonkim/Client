@@ -243,9 +243,32 @@ ex)
 <div id="nav"><h2>Nav영역</h2></div>
 <div id="footer"><h2>Section영역</h2></div>
 <div id="footer"><h2>Footer영역</h2>
-  
+ 
+ HTML5 레이아웃 
+ HTML5에서는 웹 페이지의 레이아웃만을 위한 별도의 새로운 요소들을 제공한다.
+ 이러한 요소들을 의미(semantic)요소라고 한다.
 
+                          <header>
+                          <nav>
+                          
+                          <main>
+                  <article>       <article>
+                   
+                  <section>        <aside>
+                                   <figure>
+                                    <img>
+                  <article>       <figcaption>
+                   
+                          <footer>
 
+HTML5에서 제공하는 레아이웃만을 위한 의미(semantic)요소는 다음과 같다.
+<header> HTML문서나 섹션(section)부분에 대한 헤더(header)를 정의함
+<nav>    HTML 문서의 탐색 링크를 정의함
+<section> HTML 문서에서 섹션(section)부분을 정의함
+<article> HTML 문서에서  하나의 글(article)부분을 정의함
+<aside>  HTML문서에서 페이지 부분 이외의 콘텐츠(content)를 정의함
+<footer> HTML문서나 섹션(section)부분에 대한 푸터(footer)를 정의함.
+                   
 
 
 
