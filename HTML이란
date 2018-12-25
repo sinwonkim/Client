@@ -489,14 +489,125 @@ script 요소 내부에 직접 스크립트를 작성하거나, 외부 스크립
 </script>
 
 의미요소(semantic element)
+의미 요소(semantic element)란 그 자체로 의미를 가지고 있는 요소를 가리킴
+즉, 요소가 자기 스스로 브라우저와 개발자 모두에게 자신이 사용된 의미를 명확히 전달해 주는 요소를 의미함
 
+의미 요소가 아닌 div요소나 span요소 등은 해당 요소가 무슨 목적으로 사용되었는지 코드를 살펴봐야 알 수 있다.
+but 의미 요소 table같은 경우 코드를 보지 않아도 해당 요소가 표를 만드는데 사용되었다는 것을 이름만 
+살펴봐도 알 수 있음
 
+HTML5 추가된 대표적인 의미 요소 
+1.header 요소
+2.nav 요소
+3.main 요소
+4.section 요소
+5.article 요소
+6.figure와 figcaption 요소
+7.footer 요소
 
+header 요소 
+header요소는 HTML 문서나 섹션(section)부분에 대한 헤더(header)를 정의함 
+헤더(header)란 도입부에 해당하는 콘텐츠(Content)를 가지고 있는 부분을 의미
+또한, 한 무서내에 여러개의 header 요소가 존재할 수 있다.
 
+<header>
+  <h1>전체 문서에 대한 헤더</h1>
+</header>
 
+<section>
+  <header>
+    <h2>섹션 부분에 대한 헤더</h2>
+    <p>헤더 부분에 들어간 단락</p>
+  <header>
+</section>
 
+nav요소 
+nav요소는 HTML문서 사이를 탐색할 수 있는 링크(link)의 집합을 정의
+nav요소는 링크의 커다란 집합을 의미하지만, 문서 내의 모든 링크가 nav요소에 포함되는 것은 아님
 
+<nav>
+  <a href="경로">의미 요소</a>
+  <a href="경로">의미 요소</a>
+<nav>
 
+section 요소 
+section 요소는 HTML문서에서 섹션(section)부분을 정의 
+섹션(section)이란 제목을 가지고 있으며, HTML 문서의 전체적인 내용과 관련이 있는 콘텐츠들의 
+집합을 의미 
+ex)
+<section> 
+  <h2>섹션(section)영역 입니다.
+  <p>단락</p>
+</section>
+
+article 요소
+article 요소는 HTML문서에서 독립적인 하나의 기사(article)부분을 정의 
+article 요소의 내용은 그자체만으로 이해가 되어야 하며, 웹 사이트의 나머지 부분과는 별도로 읽을 수 있어야 함
+
+<article>
+  <h2>기사 영역 </h2>
+  <p>단락 내용</p>
+</article>
+
+section HTML문서내 전체적인 내용 article은 독립적인 내용 다룸
+
+footer 요소 
+footer요소는 HTML문서나 섹션(section)부분에 대한 푸터(footer)를 정의함 
+footer요소는 HTML문서나 섹션부분에 대한 푸터를 정의함
+일반적으로 사이트의 작성자나 그에 따른 저작권 정보, 연락처 등을 명시함
+
+HTML5 이전의 레이아웃 
+의미 요소가 추가되기 전인 HTML4까지는 div요소를 사용하여 레이아웃을 작성했음 
+ex)
+<div id="header"><h2>Header영역</h2></div>
+<div id="nav"><h2>nav영역</h2></div>
+<div id="section"><h2>section영역</h2></div>
+<div id="footer"><h2>footer영역</h2></div>
+
+다양한 타입의 input 요소 
+HTML에서는 다양한 타입의 input 요소를 이용하여 사용자로부터 입력을 받을 수 있다.
+
+datalist요소 
+datalist요소는 input 요소에 대해 미리 정의된 옵션 리스트를 명시해 주는 요소 
+사용자는 텍스트를 바로 입력해도 되고, 드롭다운 메뉴에서 미리 정의한 옵션 중의 하나를 골라도 됨
+단,input 요소의 list 속성값이 datalist요소의 id속성값과 반드시 일치해야 연결됨
+
+input 요소의 타입
+form 요소는 다양한 타입의 input 요소를 포함할 수 있다.
+HTML에서 자주 사용되는 input 요소의 대표적인 타입은 
+1.text
+2.password
+3.submit
+4.radio button
+5.checkbox
+6.button 
+
+색상 입력(color)
+<input>태그의 type 속성값을 "color" 로 설정하면, input 요소는 사용자가 색상을 입력할 수 있도록 해줌
+
+이메일 입력
+<input>태그의 type 속성값을"email"로 설정하면, input 요소는 사용자가 email주소를 입력할 수 있도록 해줌
+브라우저 지원 여부에 따라 전송할 떄 입력한 email 주소가 유효한 email주소인지 자동으로 검사함
+<input type="email" name="email">
+
+검색어 입력(search)
+<input>태그의 type 속성값을 "search"로 설정하면, input 요소는 사용자가 검색어를 입력할 수 있도록 해줌
+text field 와 다른점은 입력 필드 우측에 입력된 검색어를 바로 삭제할 수 있는 x 표시 생김
+ex)
+<input type="search" name="search">
+
+formaction 속성 
+formaction 속성은 입력한 정보(data)를 전송할 떄 정보가 전달될 서버 측 파일을 명시함 
+즉,formaction 속성은 form 요소의 action 속성을 덮어쓰게 됨 
+이 속성을 사용하면 입력된 정보를 넘겨줄 서버 측 파일을 input 요소에서 바꿀 수 있게됨 
+이 속성은 submit 타입과 image타입에서만 사용할 수 있음
+
+ex)
+<form action="/examples/media/request.php">
+    사용자 : <input type="text" name="username"><br>
+    비밀번호 : <input type="password" name="password"><br><br>
+    <input type="submit" value="관리자 권한으로 전송" formaction="/examples/media/request_admin.php"><br>
+</form>
 
 
 
