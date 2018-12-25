@@ -401,6 +401,10 @@ maxlength 속성과는 달리 필드가 한번에 보여줄 수 있는 문자의
   <input type="text" name="" value="" size="30">
 </form>
 
+HTML과 CSS
+CSS란?
+Cascading style Sheets의 약자 
+CSS는 HTML 요소들이 각종 미디어에서 어떻게 보이는가를 정의하는데 사용되는 스타일 시트 언어
 
 
 
