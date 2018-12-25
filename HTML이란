@@ -363,6 +363,34 @@ ex)
   <input type="submit" value="전송">
 </form>
 
+필드셋(fieldset)
+fieldset 요소는 form 요소와 관련된 데이터들을 하나로 묶어주는 역할을 한다.
+legend 요소는 fieldset 요소 안에서만 사용할 수 있으며,field요소의 제목을 나타냅니다.
+ex)
+<form action="경로">
+  <fieldset>
+    <legend>입력 양식</legend>
+    이름:<br>
+    <input type="text" name="username"><br>
+    <input type="text" name="email">
+    <input type="submit" value="전송">
+  </fieldset>
+</form
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
