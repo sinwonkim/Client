@@ -375,7 +375,31 @@ ex)
     <input type="text" name="email">
     <input type="submit" value="전송">
   </fieldset>
-</form
+</form>
+
+
+value 속성 
+value 속성은 input 요소의 입력필드(input field)에 나타나는 초기값을 설정함 
+ex)
+<form>
+  <input type="text" name="name">
+  <input type="text" name="department" value="개발자">
+</form>
+
+maxlength 속성
+maxlength 속성은 입력 필드에 입력할 수 있는 문자의 최대 길이를 설정 
+ex)
+<form>
+  이름 : <input type="text" name="" value="" maxlength="10">
+</form>
+
+size속성
+size속성은 입력필드에 보여지는 input 요소의 크기(size)를 설정함 
+maxlength 속성과는 달리 필드가 한번에 보여줄 수 있는 문자의 최대 개수만을 의미 
+
+<form>
+  <input type="text" name="" value="" size="30">
+</form>
 
 
 
