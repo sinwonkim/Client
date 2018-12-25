@@ -488,6 +488,8 @@ script 요소 내부에 직접 스크립트를 작성하거나, 외부 스크립
   document.getElementById("demo").innerHTML = "자바 스크립트를 배워보자!";
 </script>
 
+의미요소(semantic element)
+
 
 
 
