@@ -3,47 +3,130 @@
 <head>	<!-- HTML문서의 메타데이터를 정의 -->
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<!-- <style>
+		div {
+			width: 180px;
+			height: 280px;
+			margin: 10px;
+			padding: 10px;
+			border: solid 15px #8B4513;
+			float: left;
+		}
+	</style> -->
 <link rel="stylesheet" href="css/custom.css"> 
 </head>
 <body>	
-	<!-- <p>오늘 홈페이지 <span style="border:3px solid red; font-size: 40px">방문</span>을 환영 합니다.</p> -->
-	<!-- <div style="background-color:lightblue; colog:green; text-align:center">
-		<table style="width:100%">
-			<caption>테이블 행열</caption>
-			<tr>
-				<th>1행1열제목</th>
-				<th>1행2열제목</th>
-				<th>1행3열제목 </th>
-			</tr>
-			<tr>
-				<td>2행1열</td>
-				<td>2행2열</td>
-				<td>2행3열</td>
-			</tr>
-			<tr>
-				<td>3행1열</td>
-				<td>3행2열</td>
-				<td>3행3열</td>
-			</tr>	
-		</table>
-	</div> -->
-	<div id="header">
-		<a href="https://github.com/sinwonkim"><img src="images/unp2.PNG" alt="이미지 " style="width:50px;height:50px; font-style: lightblue"></a><br>
+		<!-- <p>내 사진을 옴겨보세요 </p>
+
+	<div ondrop="drop(event)" ondragover="dragEnter(event)">
+		<img id="monalisa" width="180" height="280" src="images/mypi.jpeg" draggable="true" ondragstart="drag(event)">
 	</div>
-	<div id="nav">
+	<div ondrop="drop(event)" ondragover="dragEnter(event)"></div>
+
+	<script>
+		function dragEnter(ev) {
+			ev.preventDefault();
+		}
+
+		function drag(ev) {
+			ev.dataTransfer.setData("text", ev.target.id);
+		}
+
+		function drop(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+	</script> -->
+
+	
+	
+
+	<!-- <canvas id="drawCanvas" width="300px" height="200px" style="border: 1px solid #993300">
+		이 문장은 사용자의 웹 브라우저가 canvas 요소를 지원하지 않을 때 나타납니다!
+	</canvas>
+
+	<script>
+		var paper = document.getElementById("drawCanvas");
+		var context = paper.getContext("2d");
+
+		var gradient = context.createLinearGradient(0, 0, 200, 0);
+		gradient.addColorStop(0, "#FFCC00");
+		gradient.addColorStop(1, "#FFCCCC");
+
+		context.fillStyle = gradient;
+		context.font = "45px Arial black";
+		context.fillText("SINWON", 15, 120);
+	</script> -->
+	
 		
+	
+	onerepublic - counting stars
+	<audio controls loop><!-- autoplay는 일단 뺴자.. -->
+    <source src="music/One.mp3" type="audio/mp3">
+	</audio>
+	<h2>홈페이지 처음 방문한 날짜는?</h2>
+	<form action="경로1" method="get">
+		<input type="text" name="username" placeholder="김동동" required="required">(이름은 필수)
+		<input type="date" autofocus="autofocus"> 이메일 : <input type="email" placeholder="aasd@naver.com"> 검색 : <input type="search" name="search" placeholder="구글">	
+		<input type="submit" value="전송">
+		주민등록번호 : <input type="submit" value="관리자에게 암호화 해서 전송" 
+		formaction="경로2" formenctype="multipart/form-data" formmethod="post"><!-- formenctype속성은 post방식만 가능해서  -->
+	</form>
+	<form action="">
+		<p id="demo"><p>
+		<input list="company" name="company">
+		<datalist id="company">
+			<option value="naver">
+			<option value="google">
+			<option value="kakao">
+			<option value="배달의 민족">
+		</datalist>
+	  <input type="image" value="그림 누르면 전송됨" src="images/camel.jpg" alt="전송" height="30" width="26">
+	</form>
+	<p>나의 프로젝트 진행도는? <progress value="70" max="100">70%</progress></p>
+	<div>
+		<p id="age"><p><input type="number" min="19" max="30">
 	</div>
-	<div id="section">
-		<ul style="list-style-type:square">
-			<li><a href="https://www.naver.com/">Naver</a><br></li>
-			<li><a href="https://www.youtube.com/">Yootube</a><br></li>
-			<li><a href="https://www.google.co.kr/">Google</a><br></li>
-			<li><a href="https://www.daum.net/">Daum</a><br></li>
-		</ul>	
+		<a href="https://github.com/sinwonkim">
+			<img src="images/unp2.PNG" alt="이미지 " style="width:50px;height:50px; font-style: lightblue">
+			
+			
+		</a>
+		<div id="header">
+			
+		<div style="color: blue;">
+			<form action="">
+				<fieldset style="width: 100px;">
+					<legend>작성양식</legend>
+					<select>
+						<option value="naver">Naver
+						<option value="google">Google
+						<option value="kakao">kakao
+						<option value="line">Line
+					</select><br>
+					<textarea name="message" rows="2" cols="30"></textarea>
+					<input type="file" name="upload_file"  accept="image/*" multiple style='background-color: green; display: block; width: auto' > 
+					<input type="button" value="전송">
+				</fieldset>
+			</form>
+		</div>
 	</div>
+	<nav id="section">
+		<a href="https://www.naver.com/">Naver</a><br>
+		<a href="https://www.youtube.com/">Yootube</a><br>
+		<a href="https://www.google.co.kr/">Google</a><br>
+		<a href="https://www.daum.net/">Daum</a><br>
+	</nav>	
+	<img src="images/smo3.jpg" alt="travel2그림" width="auto" height="100%">
+	<footer>
+		<p>Copyright 2018. Email:zhfps117@naver.com</p>
 	
-	
-	<img src="images/smo3.jpg" alt="travel2그림" width="100%" height="100%">
-	
+	</footer>
+	<script>
+				 document.getElementById("demo").innerHTML = "가고 싶은 기업은?";
+				 document.getElementById("age").innerHTML = "당신의 나이(최소18세 최대30세)는?";
+	</script>
+			
 </body>
 </html>	
