@@ -2,76 +2,22 @@
 <html>	<!-- HTML 문서의 루트(root)요소를 정의 -->
 <head>	<!-- HTML문서의 메타데이터를 정의 -->
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<!-- <style>
-		div {
-			width: 180px;
-			height: 280px;
-			margin: 10px;
-			padding: 10px;
-			border: solid 15px #8B4513;
-			float: left;
-		}
-	</style> -->
+<title>SinwonHome</title>
 <link rel="stylesheet" href="css/custom.css"> 
 </head>
 <body>	
-		<!-- <p>내 사진을 옴겨보세요 </p>
-
-	<div ondrop="drop(event)" ondragover="dragEnter(event)">
-		<img id="monalisa" width="180" height="280" src="images/mypi.jpeg" draggable="true" ondragstart="drag(event)">
-	</div>
-	<div ondrop="drop(event)" ondragover="dragEnter(event)"></div>
-
-	<script>
-		function dragEnter(ev) {
-			ev.preventDefault();
-		}
-
-		function drag(ev) {
-			ev.dataTransfer.setData("text", ev.target.id);
-		}
-
-		function drop(ev) {
-			ev.preventDefault();
-			var data = ev.dataTransfer.getData("text");
-			ev.target.appendChild(document.getElementById(data));
-		}
-	</script> -->
-
-	
-	
-
-	<!-- <canvas id="drawCanvas" width="300px" height="200px" style="border: 1px solid #993300">
-		이 문장은 사용자의 웹 브라우저가 canvas 요소를 지원하지 않을 때 나타납니다!
-	</canvas>
-
-	<script>
-		var paper = document.getElementById("drawCanvas");
-		var context = paper.getContext("2d");
-
-		var gradient = context.createLinearGradient(0, 0, 200, 0);
-		gradient.addColorStop(0, "#FFCC00");
-		gradient.addColorStop(1, "#FFCCCC");
-
-		context.fillStyle = gradient;
-		context.font = "45px Arial black";
-		context.fillText("SINWON", 15, 120);
-	</script> -->
-	
-		
-	
+	<!-- <h1 class="capitalize">welcome</h1>
 	onerepublic - counting stars
-	<audio controls loop><!-- autoplay는 일단 뺴자.. -->
+	<audio controls loop>autoplay는 일단 뺴자..
     <source src="music/One.mp3" type="audio/mp3">
 	</audio>
-	<h2>홈페이지 처음 방문한 날짜는?</h2>
+	<h2 class="capitalize">when is the first time you visited homepage?</h2>
 	<form action="경로1" method="get">
 		<input type="text" name="username" placeholder="김동동" required="required">(이름은 필수)
 		<input type="date" autofocus="autofocus"> 이메일 : <input type="email" placeholder="aasd@naver.com"> 검색 : <input type="search" name="search" placeholder="구글">	
 		<input type="submit" value="전송">
 		주민등록번호 : <input type="submit" value="관리자에게 암호화 해서 전송" 
-		formaction="경로2" formenctype="multipart/form-data" formmethod="post"><!-- formenctype속성은 post방식만 가능해서  -->
+		formaction="경로2" formenctype="multipart/form-data" formmethod="post">formenctype속성은 post방식만 가능해서 
 	</form>
 	<form action="">
 		<p id="demo"><p>
@@ -88,13 +34,10 @@
 	<div>
 		<p id="age"><p><input type="number" min="19" max="30">
 	</div>
-		<a href="https://github.com/sinwonkim">
+		
 			<img src="images/unp2.PNG" alt="이미지 " style="width:50px;height:50px; font-style: lightblue">
-			
-			
-		</a>
-		<div id="header">
-			
+		</a>	
+	<div id="header">	
 		<div style="color: blue;">
 			<form action="">
 				<fieldset style="width: 100px;">
@@ -113,12 +56,13 @@
 		</div>
 	</div>
 	<nav id="section">
-		<a href="https://www.naver.com/">Naver</a><br>
-		<a href="https://www.youtube.com/">Yootube</a><br>
-		<a href="https://www.google.co.kr/">Google</a><br>
-		<a href="https://www.daum.net/">Daum</a><br>
+		<a href="https://www.naver.com/">Naver</a>
+		<a href="https://www.youtube.com/">Yootube</a>
+		<a href="https://www.google.co.kr/">Google</a>
+		<a href="https://www.daum.net/">Daum</a>
 	</nav>	
 	<img src="images/smo3.jpg" alt="travel2그림" width="auto" height="100%">
+	
 	<footer>
 		<p>Copyright 2018. Email:zhfps117@naver.com</p>
 	
@@ -126,7 +70,51 @@
 	<script>
 				 document.getElementById("demo").innerHTML = "가고 싶은 기업은?";
 				 document.getElementById("age").innerHTML = "당신의 나이(최소18세 최대30세)는?";
-	</script>
+	</script> -->
+	<header>
+	 	<div class="pp">Welcome Sin's Home</div>
+	 	<div class="git">
+			<figure class="L">
+			<a href="https://github.com/sinwonkim"><img src="images/unp2.PNG" alt="이미지 " style="width:50px;height:50px; font-style: lightblue"></a>
+			<figcaption><font size="3">sinwon's git</font></figcaption>
+			</figure>
+		</div>
+		<div class="audi">
+			<audio controls autoplay><source src="music/One.mp3" type="audio/mp3"
+			></audio>
+			<p class="adui">onerepublic - counting stars<p>
+		</div>
+	</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="https://www.naver.com/">Naver</a></li>
+      <li><a href="https://www.youtube.com/">Yootube</a></li>
+      <li><a href="https://www.google.co.kr/">Google</a></li>
+      <li><a href="https://www.daum.net/">Daum</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Samuel Beckett</h1>
+    <p>To what writer, besides Ayn Rand, do the business-minded techies and tech-minded businessmen of 21st-century Silicon Valley look for their inspiration? The name of Samuel Beckett may not, at first, strike you as an obvious answer — unless, of course, you know the origin of the phrase "Fail better." It appears five times in Beckett's 1983 story "Worstward Ho," the first of which goes like this: "Ever tried. Ever failed. No matter. Try again. Fail again. Fail better." The sentiment seems to resonate naturally with the mentality demanded by the world of tech startups, where nearly every venture ends in failure, but failure which may well contain the seeds of future success.</p>
+    <p>Or rather, the apparent sentiment resonates. "By itself, you can probably understand why this phrase has become a mantra of sorts, especially in the glamorized world of overworked start-up founders hoping against pretty high odds to make it," writes Books on the Wall's Andrea Schlottman.</p>
+    <p>Or rather, the apparent sentiment resonates. "By itself, you can probably understand why this phrase has become a mantra of sorts, especially in the glamorized world of overworked start-up founders hoping against pretty high odds to make it," writes Books on the Wall's Andrea Schlottman.</p>
+    <p>Or rather, the apparent sentiment resonates. "By itself, you can probably understand why this phrase has become a mantra of sorts, especially in the glamorized world of overworked start-up founders hoping against pretty high odds to make it," writes Books on the Wall's Andrea Schlottman.</p>
+    <p>Or rather, the apparent sentiment resonates. "By itself, you can probably understand why this phrase has become a mantra of sorts, especially in the glamorized world of overworked start-up founders hoping against pretty high odds to make it," writes Books on the Wall's Andrea Schlottman.</p>
+    <p>Or rather, the apparent sentiment resonates. "By itself, you can probably understand why this phrase has become a mantra of sorts, especially in the glamorized world of overworked start-up founders hoping against pretty high odds to make it," writes Books on the Wall's Andrea Schlottman.</p>
+    <p>Or rather, the apparent sentiment resonates. "By itself, you can probably understand why this phrase has become a mantra of sorts, especially in the glamorized world of overworked start-up founders hoping against pretty high odds to make it," writes Books on the Wall's Andrea Schlottman.</p>
+    <p>Or rather, the apparent sentiment resonates. "By itself, you can probably understand why this phrase has become a mantra of sorts, especially in the glamorized world of overworked start-up founders hoping against pretty high odds to make it," writes Books on the Wall's Andrea Schlottman.</p>
+    <p>Or rather, the apparent sentiment resonates. "By itself, you can probably understand why this phrase has become a mantra of sorts, especially in the glamorized world of overworked start-up founders hoping against pretty high odds to make it," writes Books on the Wall's Andrea Schlottman.</p>
+    <p>Or rather, the apparent sentiment resonates. "By itself, you can probably understand why this phrase has become a mantra of sorts, especially in the glamorized world of overworked start-up founders hoping against pretty high odds to make it," writes Books on the Wall's Andrea Schlottman.</p>
+    
+  </article>
+</section>
+
+<footer>
+<p>Copyright&copy;Sinwon  Email:zhfps117@naver.com</p>
+</footer>
 			
 </body>
 </html>	
