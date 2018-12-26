@@ -190,11 +190,30 @@ ex)
   .narrowLineHeight{line-height:0.8;}
 </style>
 
+CSS를 사용하면 웹 페이지에 나타나는 글꼴(Font)를 다양하게 설정할 수 있다.
+CSS에서 사용할 수 있는 font 속성은 
+1.font-family
+2.font-style
+3.font-variant
+4.font-weight
+5.font-size
 
+font-size 속성
+제목을 위한 HTML요소인<h1>태그부터<h6>태그를 사용해야 한다.
 
+CSS링크
+CSS를 사용하면 링크에 다양한 효과를 설정할 수 있다.
+링크(link)에는 color,font-family,backgroun 속성 등 CSS의 다양한 속성들을 적용할 수 있다.
+또한,text-decoration 속성값을 none으로 설정하여, 링크가 연결된 텍스트의 밑줄을 제거 할 수 있다.
 
+line-height 속성
+line-height 속성은 텍스트의 줄 간격을 설정합니다.
 
-
+ex)
+<style>
+  .narrowLineHeight{line-height:0.8;}
+</style>
+<p class="narrowLineHeight">이 부분은 줄간격을 줄여보았어요!<br>
 
 
 
