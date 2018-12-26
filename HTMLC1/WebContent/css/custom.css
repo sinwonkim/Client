@@ -32,6 +32,7 @@ table,th,td {border:1px solid black; border-collapse:collapse;}
   box-sizing: border-box;
 } */
 a {text-decoration:none;}
+a:hover, a:active {color: #FF4500; }
 .pp {width:auto; font-size:45px;}
 .git {
 	position:relative;
@@ -69,11 +70,13 @@ section {
 
 /* Style the navigation menu */
 nav {
+	
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   background: #ccc;
   padding: 20px;
+ 
 }
 
 /* Style the list inside the menu */
