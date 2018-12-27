@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/* 
+body {background-image: url("../images/tr1.jpg");}
+a {text-decoration:none;}
+.capitalize {text-transform:capitalize;}
+#header { 
+		position: relative;
+		width: auto;
+		height: 200px;
+		background: url(../images/1.jpg) no-repeat center center;
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 0px;
+} 
+
+#section {
+		position: relative;
+		width: 100%;
+		height: 2000px;
+		background: url(../images/sni1.jpg) no-repeat center center;
+		background-size: cover;
+		float: left;
+		padding: 10px;
+}
+#age{ display:inline-block }	
+img {width:100%; border:1px solid black;}
+table,th,td {border:1px solid black; border-collapse:collapse;}
+
+ */
+ 
+ /* * {
+  box-sizing: border-box;
+} */
+a {text-decoration:none;}
+a:hover, a:active {color: #FF4500; }
+#h1::first-letter {color: #FF4500;
+			font-size: 2em;}
+.pp {font-size:45px;}
+.git {
+	position:relative;
+	top:-65px;
+	left:-30px;}
+.L {text-align:left;
+
+	top:20px;}
+
+.audi{
+	position:absolute;
+	top:5px;
+	right:10px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  top:20px;
+  padding: 20px;
+  text-align:center ;
+  font-size: 10px;
+  color: white;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+	
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #ccc;
+  padding: 20px;
+ 
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  background: url(../images/tr1.jpg);   opacity: 0.8; filter: alpha(opacity=80);
+  background-size: cover;
+  padding: 10px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}

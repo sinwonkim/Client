@@ -1,0 +1,686 @@
+작성할 HTML버젼 HTML5 ( 2014)   
+HTML이란 HyperText Markup Language의 약자 
+각각의 HTML태그는 웹 페이지의 디자인이나 기능을 결정하는데 사용됨 
+시작태그만 가지는 경우 <img><br><hr> 등도 있음
+
+
+
+모든 태그는 미리 정의되어 있다.  각각의 태그와 속성을 사용하기만 하면 된다.
+<!DOCTTYPE html>
+<html>
+  <head>  //HTML문서의 메타데이터를 정의  메타데이터란 HTML문서에 대한 정보data로 웹 브라우저에는 직접적으로 표현되지 않는 정보를 의미한다.
+    <title>제목부분</title>
+  </head>
+  <body> // 웹 브라우저를 통해 보이는 내용content 부분 
+     <h1>크기순</h1> // <h1>~<h6> 제목(heading)을 나타냄
+     <h2>좀더 작다</h2>
+     <h3>더 작다.</h3>
+     <p>단락</p> // 단락(paragraph)을 나타냄
+  </body>
+
+</html>
+
+HTML요소(element)는 여러 속성을 가질 수 있으며, 이러한 속성(attribute)는 해당 요소에 대한 추가적인 정보를 제공함 
+또한,HTML 요소는 시작 태그로 시작해서 종료 태그로 끝남 
+
+<p class="속성값"> 내용 </p>
+속성은 HTML요소중에서도 언제나 시작태그에서만 정의되며, 속성 이름과 속성값(value)로 표현 됨
+p 태그이름
+class 속성명
+<> 시작태그   
+</> 종료태그
+
+문법(Grammer)
+<태그이름 속성이름 ="속성값">
+<p class=""> "" 속성값은 따옴표로 감쌀것 ~!!~!  큰 따옴표""   작은 따옴표'' 상관x
+속성(attribute) 이름은 언제나 소문자로 작성할것  W3C에서 소문자로 권장사항임
+
+<h>태그 위아래로는 약간의 여백이 자동으로 삽임됨 
+<h>태그는 제목의 표현이라는 기능 외에도 여러 검색엔진은 각 웹 사이트의 내용을 
+<h>태그를 이용하여 키워드를 수집하고, 그 내용을 파악함 
+따라서 HTML문서에 포함되는 제목은 <h>태그로 작성해야만 검색엔진에 의해 제대로 검색될 확률을 높일 수 있음
+</>종료태그 중요함 XHTML이나 XML같은 문법이 엄격한 언어에서는 종료태그의 유무를 엄격하게 검사함 
+
+HTML코드에서 띄어쓰기나<br> 줄 나누기<p></p> 하고싶을땐 태그를 사용할것 
+이 방식말고 HTML코드내에서 작성한 텍스트 서식을 그대로 표현하려면 <pre>태그를 사용해야 한다.
+<pre>
+줄 나눌 수 있음 
+태그 <br>   <p> </p> 태그 안
+쓰고도
+</pre>
+
+수평가로 구분선 <hr>
+sin
+--------------------
+won
+--------------------
+
+HTML은 텍스트(text)에 다양한 효과를 주는 여러 태그(tag)를 제공 
+HTML문서에서 텍스트를 굵게 표현하고 싶을 떄에는 <b>태그(bold text)나 <strong>태그를 사용하면 됨
+
+<b>굵게됨</b> 단순 글씨 굵게
+<strong>중요 부분굵게</strong>   strong이나 bold나 시각적으로 별 차이 없어 보인다. strong은 의미로서 중요하다는 의미 포함정도 
+<i>이탤릭체</i>  기울임
+<em>이텔릭체면서 중요하다</em>
+
+<mark>마크</mark> 하이트라이트 강조부분
+<del>이부분</del>  이부분이란 글자에 중앙으로 그어진 삭제 느낌
+<ins>언더라인효과</ins>
+
+<p>X<sup>2</sup></p>    x의 제곱 
+
+인용구(quotation)
+<p>인용구 입니다.</q>   "인용구 입니다."
+
+주소태그
+<address>서울특별시 강남구 </adress>
+
+주석(Comment) <!-- --> 
+주석이란 개발자가 작성한 해당 코드에 대한 이해를 돕는 설명이나 디버깅을 위해 작성한 구문을 의미
+이러한 주석은 다른 HTML코드와 달리 웹브라우저에 의해 표현되지x
+
+엔터티(Entity)
+HTML에는 미리 예약된 몇몇 문자가 있으며, 이러한 문자를 HTML 예약어(reserved characters)라고 부름 
+이러한 HTML 예약어를 HTML 코드에서 사용하면, 웹 브라우저는 그것을 평소와는 다른 의미로 해석함 
+떠러소 HTML예약어를 기존에 사용하던 의미 그대로 사용하기 위해 별도로 만든 문자셋을 엔터티(Entity)라고 한다.
+
+&lt;  < 
+&gt;  >
+&amp  &  AND기호
+
+심볼(Symbol)특수문자
+HTML예약어 이외에도 키보드에 입력할 수 없는 문자를 표현하기 위한 심볼 특수문자를 사용할 수 있음
+&times;   곱셈
+&divde;   나눗셈
+&copy;    저작권 
+
+문자셋(Character set)
+웹 브라우저가 HTML문서를 정확하게 나타내기 위해서는 해당 문서가 어떠한 문자셋으로 저장되었는지를 알아야 함
+따라서 HTML 문서가 저장될 때 사용된 문자셋에 대한 정보를<head>태그 내의 <meta>태그에 명시함 
+HTML문서가 저장될때 사용된 문자셋에 대한 정보를 <head>태그내의<meta>태그에 명시함 
+대표적 문자셋 UTF-8  유니코드 문자를 지원하는 HTML5의 기본 문자셋
+
+HTML스타일(Style)
+HTML요소의 style속성(attribute)을 이용하면 CSS스타일을 HTML요소에 직접 설정할 수 있음 
+But 이러한 Style속성을 이용한 방법은 단 하나의 HTML요소(Attribute)에만 Style을 적용할 수 있다.
+
+문법
+<태그이름 style="속성이름:속성값">
+ex)<h1 style="background-color:white"></h1>  -- 배경색  
+   <h1 style="color:maroon"></h1>  -- 글자색 변경
+
+글자 크기 변경 
+<h1 style="font-size:250%">style 속성 크기 변환</h1>
+
+문단 정렬 변경 
+<h1 style="text-align:center">
+  style 속성을 이용한 문단 정렬 변경 
+</h1>
+
+다중 style 속성 사용하여 여러 CSS스타일 한번에 적용   배경색깔,크기변경,정렬변경 등
+<h1 style="background-color:white; font-size:100px; text-align:center">다중적용</h1>
+
+style 속성값에 사용되는 CSS속성(property)과 속성값들은 세미콜론(;)을 이용하여 구분 
+CSS 속성을 하나만 사용할 때나, 여러 개의 CSS 속성 중 마지막 CSS속성은 세미콜론(;)을 생략할 수 있다.
+
+HTML 색(Color)표현
+HTML에서 색을 표현하는 방법
+1.색상 이름으로 표현
+2.RGB 색상값으로 표현
+3.16진수 
+
+HTML배경(Background)
+HTML문서의 기본 배경(background)은 흰색입니다.
+또한,HTML 요소들도 각자 자신만의 배경을 가지고 있음 
+
+HTML에서는 이러한 배경을 다음과 같이 변경할 수 있음 
+HTML5 이전까지는 bgcolor속성을 이용하여 HTML 요소의 배경색을 다른 색으로 변경할 수 있었다. 하지만 
+HTML5부터는 BGCOLOR속성을 더 이상 지원X ,CSS를 이용하여 배경색을 변경하도록 하고 있다.
+
+CSS스타일을 이용하여 배경색을 다른 색으로 변경하는 예제
+<style>
+  body {background-color:lightblue; }   태그셀렉 {}
+</style>
+
+배경을 다른 이미지로 변경 
+background 속성을 이용하면 HTML 요소의 배경을 이미지(image)로 설정할 수 있음
+문법
+<태그이름 background="이미지주소">
+ex)<body backgroud="경로/이미지.jpg"></body>
+배경으로 이미지를 사용하면 웹 페이지의 로딩시간이 증가하게 된다. 
+따라서 보통은 작은 사이지의 이미지를 패턴으로 만들어 배경 이미지로 반복 설정한다고 한다.
+
+<style>
+body {
+    background-image: url(./imgs/tr1.jpg);
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: 1550px 1000px, cover;
+}
+</style>
+
+HTML링크(Link)
+웹페지에서 다른 페이지나 다른 사이트로 연결되는 수많은 하이퍼 링크가 존재함 
+이러한 하이퍼 링크를 간단히 링크라고도 부르며, HTML에서는 <a>태그로 표현함 
+
+문법
+<a href="링크주소">네XX</a>  
+<a>태그의 href속성(attribute)은 링크를 클릭하면  연결할 페이지나 사이트의 URL주소를 명시 
+<a>태그는 텍스트나 단락,이미지 등 다양한 HTML요소에 사용할 수 있다.
+
+Traget속성
+<a>태그의 target속성은 링크로 연결된 문서를 어디에서 열지를 명시한다.
+<h2><a href="/html/intro" target="_blank">blank</a></h2> 링크로 연결된 문서를 새 창이나 새 탭에서 염 
+
+<h2><a href="/html/intro" target="_self">self</a></h2> 현재 프레임에서 염(기본 설정)
+
+<h2><a href="/html/intro" target="_parent">parent</a></h2>
+
+<h2><a href="/html/intro" target="_top">top</a></h2>
+
+<h2><a href="/html/intro" target="myframe">myframe</a></h2>
+
+<iframe name="myframe" style="width:50%; height: 330px"></iframe> 링크로 연결된 문서를 지정된 프레임(frame)에서 염 
+
+링크의 상태(state)
+link 아직 한 번도 방문한 적이 없는 상태
+visited 한 번이라도 방문한 적이 있는 상태
+hover 링크 위에 마우스를 올려놓은 상태 
+active 링크를 마우스로 누르고 있는 상태 
+
+페이지 책갈피 
+<a>태그의 name 속성 이용하면 책갈피 형식 가능
+<a href="#bookmark"><p>제목 10으로 간다.</p></a>
+<h2><a name="bookmark"></a>제목10<h2>
+
+HTML 이미지(image)
+
+HTML요소의 타입 1.블록  2.인라인 형식
+HTML의 모든 요소는 해당 요소가 웹 브라우저에 어떻게 보이는가를 결정짓는 display속성을 가짐
+대부분의 HTML요소는 이러한 display 속성값으로 두 가지 값 중 하나를 가짐 
+1.블록형식 display 속성값이 블록인 요소는 언제나 새로운 라인에서 시작하며, 해당 라인의 모든 너비를 차지 
+ex) 
+<p>, <div>, <h>, <ul>, <ol>, <form>요소는 display 속성값이 블록(block)인 대표적인 요소입니다.
+
+2.인라인 형식
+display속성값이 인라인요소는 새로운 라인에서 시작하지x
+또한, 요소의 너비도 해당 라인 전체가 아닌 해당 HTML 요소의 내용(Content)만큼만 차지 
+<span>, <a>, <img>요소는 display 속성값이 인라인(inline)인 대표적인 요소입니다.
+
+<div>요소 
+<div>요소는 인라인 요소로 다른 HTML요소들을 하나로 묶는데 자주 사용되는 요소 이다.
+<div>요소는 주로 여러 요소들의 스타일을 한 번에 적용하기 위해 사용됨
+
+<div style="background-color:lightgery; color:green; text-align:center">
+  <h1>div요소를 이용한 스타일을 적용한다</h1>
+  <p>이렇게 div요소로 여러 요소들을 묶은 다음에 style속성과 클래스등을 이용하여 한번에 스타일 적용</p>
+</div>
+
+<span>요소 
+ex)
+<p>이렇게
+<span style="border:3px solid red">span요소로 텍스트의 일부분</span>만을 따로 묶은 후에 스타일을 적용할 수 있다.
+</p>
+
+HTML 레이아웃(Layout)
+레이아웃이란 특정 공간에 여러 구성 요소를 보기 좋게 효과적으로 배치하는 작업을 의미함아웃은
+웹 페이지의 레이아웃은 웹 사이트의 외관을 결정짓는 매우 중요한 요소 
+
+HTML에서는 다음과 같은 방법으로 레이아웃을 작성할 수 있다  
+1.div요소를 이용한 레이아웃
+2.HTML5레이아웃
+3.table요소를 이용한 
+
+H  E   A  D   E   R 영역
+
+N   S E C T I O N
+A
+V
+
+F O  O  T  E  R  영역
+ex)
+<div id="header"><h2>Header영역</h2></div>
+<div id="nav"><h2>Nav영역</h2></div>
+<div id="footer"><h2>Section영역</h2></div>
+<div id="footer"><h2>Footer영역</h2>
+ 
+ HTML5 레이아웃 
+ HTML5에서는 웹 페이지의 레이아웃만을 위한 별도의 새로운 요소들을 제공한다.
+ 이러한 요소들을 의미(semantic)요소라고 한다.
+
+                          <header>
+                          <nav>
+                          
+                          <main>
+                  <article>       <article>
+                   
+                  <section>        <aside>
+                                   <figure>
+                                    <img>
+                  <article>       <figcaption>
+                   
+                          <footer>
+
+HTML5에서 제공하는 레아이웃만을 위한 의미(semantic)요소는 다음과 같다.
+<header> HTML문서나 섹션(section)부분에 대한 헤더(header)를 정의함
+<nav>    HTML 문서의 탐색 링크를 정의함
+<section> HTML 문서에서 섹션(section)부분을 정의함
+<article> HTML 문서에서  하나의 글(article)부분을 정의함
+<aside>  HTML문서에서 페이지 부분 이외의 콘텐츠(content)를 정의함
+<footer> HTML문서나 섹션(section)부분에 대한 푸터(footer)를 정의함.
+
+table 요소를 이용한 레이아웃 
+table요소를 이용하여 레이아웃을 작성하는 방법은 오래전에 사용하던 방식 잘 사용 
+
+form요소 
+웹 페이지에서는 form요소를 사용하여 사용자로부터 입력을 받을 수 있음
+또한, 사용자가 입력한 데이터를 서버로 보낼 때에도 form요소를 사용함 
+
+form요소는 다음과 같은 문법 
+<form action="처리할 페이지 주소" method="get아니면post방식"></form> 
+
+action속성(attribute)은 입력받은 데이터를 처리할 서버상의 스크립트 파일의 주소를 명시함
+이렇게 전달받은 데이터를 처리하는 스크립트 파일을 폼 핸들러(form-handler)라고 함 
+method속성은 입력받은 데이터를 서버에 전달할 방식을 명시함
+따라서 사용자가 form요소를 통해 입력한 데이터는 action 속성에 명시된 위치로 method 속성의 방식을 통해 전달됨
+
+method속성 
+method속성을 통해 명시할 수 있는 form요소의 전달방식은 GET방식과 POST방식으로 나눠짐
+
+GET방식은 주소에 데이터(data)를 추가하여 전달하는 방식임 
+데이터가 주소 입력창에 그대로 나타나며,전송할 수 있는 데이터의 크기 또한 제한적 
+따라서 검색 엔진의 쿼리(query)와 같이 크기가 작고 중요도가 낮은ㅇ 정보를 보낼 떄 주로 사용함
+
+POST방식은 데이터(data)를 별도로 첨부하여 전달하는 방식 
+데이터가 외부에 드러나지 않으며, 전송할 수 있는 데이터의 크기 또한 제한이 없음
+따라서 보안성 및 활용성이 GET방식보다 좋다.
+
+다양한 타입의 input 요소
+HTML에서는 다양한 타입의 input 요소를 사용하여 사용자로부터 입력을 받을 수 있다.
+HTML에서 사용할 수 있는 대표적인 input 요소의 타입은 다음과 같다.
+1.텍스트 입력(text)
+2.비밀번호 입력(password)
+3.라디오버튼(radio)
+4.체크박스(checkbox)
+5.파일선택(file)
+6.선택입력(select)
+7.문잡입력(textarea)
+8.버튼입력(button)
+9.전송버튼(submit)
+10.필드셋(fieldset)
+
+텍스트 입력
+<input>태그의 type 속성값을 "text"로 설정하면, 사용자로부터 한 줄의 텍스트를 입력받을 수 있다.
+
+<form action="">
+  검색할 내용을 입력하세요: <input type="text" name="search">
+</form>
+ 
+라디오 버튼
+<input>태그의 type 속성값을 "radio"로 설정하면, 사용자로부터 여러 개의 옵션(option)중에서 단 하나의 
+옵션만을 입력받을 수 있다. 
+이때 서버로 정확한 입력을 전송하기 위해서는 반드시 모든  input 요소의 name 속성이 같아야 한다.
+
+<form>
+  <input type="radio" name="lecture" value="" checked>HTML<br>
+  <input type="radio" name="lecture" value="" checked>HTML<br>
+  <input type="radio" name="lecture" value="" checked>HTML<br>
+  <input type="radio" name="lecture" value="" checked>HTML<br>
+</form>
+
+파일 선택
+<input>태그의 type 속성값을 "file"로 설정하면, 사용자로부터 파일을 전송받을 수 있다.
+
+
+ex)
+<form>
+  <input type="file" name="" accept="image/*">
+</form>accept 속성을 이용하여 입력받을 수 있는 파일의 확장자 및 종류를 명시할 수 있다.
+
+<select name="">
+  <option value="">
+  <option value="">
+  <option value="">
+  <option value="">
+  <option value="">
+</select>
+
+<textarea name="mesaage" rows="5" clos="30">
+  메세지 적을 내용
+</textarea>
+
+
+전송버튼
+<input>태그의 type 속성값을 "submit"으로 설정하면, 사용자로부터 입력받은 데이터를 서버의
+폼 핸들러로 제출하는 버튼 만들 수 있다.
+
+폼 핸들러란 입력받은 데이터를 처리하기 위한 서버 측의 웹 페이지를 의미한다.
+
+이러한 폼 핸들러의 주소는 form요소의 action속성을 이용하여 명시할 수 있다.
+
+<form action="보낼경로">
+  <input type="text" name="nickname" value="별명">
+  <input type="submit" value="전송">
+</form>
+
+필드셋(fieldset)
+fieldset 요소는 form 요소와 관련된 데이터들을 하나로 묶어주는 역할을 한다.
+legend 요소는 fieldset 요소 안에서만 사용할 수 있으며,field요소의 제목을 나타냅니다.
+ex)
+<form action="경로">
+  <fieldset>
+    <legend>입력 양식</legend>
+    이름:<br>
+    <input type="text" name="username"><br>
+    <input type="text" name="email">
+    <input type="submit" value="전송">
+  </fieldset>
+</form>
+
+
+value 속성 
+value 속성은 input 요소의 입력필드(input field)에 나타나는 초기값을 설정함 
+ex)
+<form>
+  <input type="text" name="name">
+  <input type="text" name="department" value="개발자">
+</form>
+
+maxlength 속성
+maxlength 속성은 입력 필드에 입력할 수 있는 문자의 최대 길이를 설정 
+ex)
+<form>
+  이름 : <input type="text" name="" value="" maxlength="10">
+</form>
+
+size속성
+size속성은 입력필드에 보여지는 input 요소의 크기(size)를 설정함 
+maxlength 속성과는 달리 필드가 한번에 보여줄 수 있는 문자의 최대 개수만을 의미 
+
+<form>
+  <input type="text" name="" value="" size="30">
+</form>
+
+HTML과 CSS
+CSS란?
+Cascading style Sheets의 약자 
+CSS는 HTML 요소들이 각종 미디어에서 어떻게 보이는가를 정의하는데 사용되는 스타일 시트 언어
+
+CSS적용 방법
+HTML문서에 CSS 스타일을 적용하는 방법은 
+1.인라인 스타일
+2.내부 스타일 시트
+3.외부 스타일 시트
+
+인라인 스타일이란 HTML 요소 내부에 style  속성을 사용하여 CSS스타일 적용하는 방법
+이러한 인라인 스타일은 해당 요소에만 스타일 적용 가능
+ex)
+<p style="color:red; text-decoration:underline">
+인라인 스타일
+</p>
+
+내부 스타일 시트(Internal style sheet)
+내부 스타일 시트를 이용한 방법은 HTML 문서의 <head>태그 내에 <style>태그를 사용하여 스타일을 지정 
+
+<style>
+  body{background-color:light}
+  p { color:red; text-decoration:underline; }
+</style>
+
+외부 스타일 시트(External style sheet)
+외부 스타일 시트를 이용한 방법은 웹 사이트 전체의 스타일을 하나의 파일에서 변경할 수 있도록 해줌 
+스타일을 적용할 모든 웹 페이지의 <head>태그 내에 <link>태그를 사용하여 외부 스타일 시트를 포함하면 됨
+
+<link rel="stylesheet" href="파일경로.css">
+
+스타일 적용의 우선순위 
+스타일 적용 방법들이 혼합되어 사용될 경우 
+1. 인라인 스타일
+2. 내부 /외부 스타일 시트
+3. 웹 브라우저 기본 스타일
+
+CSS 선택자(selector)
+스타일을 적용할 HTML 요소를 선택하는데 사용하는 대표적인 선택자는 
+
+HTML 요소 선택자
+아이디(id) 선택자
+클래스(class) 선택자
+그룹(group) 선택자
+
+전체 선택자
+CSS를 적용할 대상으로 HTML 문서 내부의 모든 요소를 선택함
+<style>
+  * { color:red; }
+</style>
+
+HTML 요소 선택자
+CSS를 적용할 대상으로 HTML 요소의 이름을 직접 사용하여 선택할 수 있다.
+<style>
+  h2 {color:teal; text-decoration:unerline;}
+<style>
+
+아이디(id) 선택자
+아이디 선택자는 CSS를 적용할 대상으로 특정 요소를 선택할 떄 사용 
+
+<style>
+  #heading { color:sandbrown; text-decoration:line-through; }
+</style>
+
+<h2 id="heading">이 부분 스타일 적용</h2>
+
+HTML  요소 선택자 
+CSS를 적용할 대상으로 HTML 요소의 이름을 직접 사용하여 선택할 수 있다
+
+P { color:red; font-size:14px; }
+
+HTML과 자바스크립트 
+자바스크립트란?
+자바스크립트(JavaScript)는 객체(object)기반의 스크립트 언어 
+HTML로는 웹의 내용을 작용하고, CSS로는 웹을 디자인하며, 자바스크립트로는 웹의 동작을 구현할 수 있다.
+자바스크립트로는 주로 웹 브라우저에서 사용되나, Node.js와 같은 프레임워크를 사용하면 서버 측 프로그래밍에서도 사용할 수 있다.
+현재 컴퓨터나 스마트폰 등에 포함된 대부분의 웹 브라우저에는 자바스크립트 인터프리터가 내장되어 있다.
+
+script
+script요소는 해당 웹 페이지에 사용할 스크립트(script)를 정의하기 위해 사용함
+script 요소 내부에 직접 스크립트를 작성하거나, 외부 스크립트 파일의 주소를 src 속성값으로 명시하면 됨
+
+<script>
+  document.getElementById("demo").innerHTML = "자바 스크립트를 배워보자!";
+</script>
+
+의미요소(semantic element)
+의미 요소(semantic element)란 그 자체로 의미를 가지고 있는 요소를 가리킴
+즉, 요소가 자기 스스로 브라우저와 개발자 모두에게 자신이 사용된 의미를 명확히 전달해 주는 요소를 의미함
+
+의미 요소가 아닌 div요소나 span요소 등은 해당 요소가 무슨 목적으로 사용되었는지 코드를 살펴봐야 알 수 있다.
+but 의미 요소 table같은 경우 코드를 보지 않아도 해당 요소가 표를 만드는데 사용되었다는 것을 이름만 
+살펴봐도 알 수 있음
+
+HTML5 추가된 대표적인 의미 요소 
+1.header 요소
+2.nav 요소
+3.main 요소
+4.section 요소
+5.article 요소
+6.figure와 figcaption 요소
+7.footer 요소
+
+header 요소 
+header요소는 HTML 문서나 섹션(section)부분에 대한 헤더(header)를 정의함 
+헤더(header)란 도입부에 해당하는 콘텐츠(Content)를 가지고 있는 부분을 의미
+또한, 한 무서내에 여러개의 header 요소가 존재할 수 있다.
+
+<header>
+  <h1>전체 문서에 대한 헤더</h1>
+</header>
+
+<section>
+  <header>
+    <h2>섹션 부분에 대한 헤더</h2>
+    <p>헤더 부분에 들어간 단락</p>
+  <header>
+</section>
+
+nav요소 
+nav요소는 HTML문서 사이를 탐색할 수 있는 링크(link)의 집합을 정의
+nav요소는 링크의 커다란 집합을 의미하지만, 문서 내의 모든 링크가 nav요소에 포함되는 것은 아님
+
+<nav>
+  <a href="경로">의미 요소</a>
+  <a href="경로">의미 요소</a>
+<nav>
+
+section 요소 
+section 요소는 HTML문서에서 섹션(section)부분을 정의 
+섹션(section)이란 제목을 가지고 있으며, HTML 문서의 전체적인 내용과 관련이 있는 콘텐츠들의 
+집합을 의미 
+ex)
+<section> 
+  <h2>섹션(section)영역 입니다.
+  <p>단락</p>
+</section>
+
+article 요소
+article 요소는 HTML문서에서 독립적인 하나의 기사(article)부분을 정의 
+article 요소의 내용은 그자체만으로 이해가 되어야 하며, 웹 사이트의 나머지 부분과는 별도로 읽을 수 있어야 함
+
+<article>
+  <h2>기사 영역 </h2>
+  <p>단락 내용</p>
+</article>
+
+section HTML문서내 전체적인 내용 article은 독립적인 내용 다룸
+
+footer 요소 
+footer요소는 HTML문서나 섹션(section)부분에 대한 푸터(footer)를 정의함 
+footer요소는 HTML문서나 섹션부분에 대한 푸터를 정의함
+일반적으로 사이트의 작성자나 그에 따른 저작권 정보, 연락처 등을 명시함
+
+HTML5 이전의 레이아웃 
+의미 요소가 추가되기 전인 HTML4까지는 div요소를 사용하여 레이아웃을 작성했음 
+ex)
+<div id="header"><h2>Header영역</h2></div>
+<div id="nav"><h2>nav영역</h2></div>
+<div id="section"><h2>section영역</h2></div>
+<div id="footer"><h2>footer영역</h2></div>
+
+다양한 타입의 input 요소 
+HTML에서는 다양한 타입의 input 요소를 이용하여 사용자로부터 입력을 받을 수 있다.
+
+datalist요소 
+datalist요소는 input 요소에 대해 미리 정의된 옵션 리스트를 명시해 주는 요소 
+사용자는 텍스트를 바로 입력해도 되고, 드롭다운 메뉴에서 미리 정의한 옵션 중의 하나를 골라도 됨
+단,input 요소의 list 속성값이 datalist요소의 id속성값과 반드시 일치해야 연결됨
+
+input 요소의 타입
+form 요소는 다양한 타입의 input 요소를 포함할 수 있다.
+HTML에서 자주 사용되는 input 요소의 대표적인 타입은 
+1.text
+2.password
+3.submit
+4.radio button
+5.checkbox
+6.button 
+
+색상 입력(color)
+<input>태그의 type 속성값을 "color" 로 설정하면, input 요소는 사용자가 색상을 입력할 수 있도록 해줌
+
+이메일 입력
+<input>태그의 type 속성값을"email"로 설정하면, input 요소는 사용자가 email주소를 입력할 수 있도록 해줌
+브라우저 지원 여부에 따라 전송할 떄 입력한 email 주소가 유효한 email주소인지 자동으로 검사함
+<input type="email" name="email">
+
+검색어 입력(search)
+<input>태그의 type 속성값을 "search"로 설정하면, input 요소는 사용자가 검색어를 입력할 수 있도록 해줌
+text field 와 다른점은 입력 필드 우측에 입력된 검색어를 바로 삭제할 수 있는 x 표시 생김
+ex)
+<input type="search" name="search">
+
+formaction 속성 
+formaction 속성은 입력한 정보(data)를 전송할 떄 정보가 전달될 서버 측 파일을 명시함 
+즉,formaction 속성은 form 요소의 action 속성을 덮어쓰게 됨 
+이 속성을 사용하면 입력된 정보를 넘겨줄 서버 측 파일을 input 요소에서 바꿀 수 있게됨 
+이 속성은 submit 타입과 image타입에서만 사용할 수 있음
+
+ex)
+<form action="/examples/media/request.php">
+    사용자 : <input type="text" name="username"><br>
+    비밀번호 : <input type="password" name="password"><br><br>
+    <input type="submit" value="관리자 권한으로 전송" formaction="/examples/media/request_admin.php"><br>
+</form>
+
+formenctype 속성
+formenctype 속성은 입력한 정보(data)를 전송할 떄 암호화하는 방법을 명시함 
+즉,formaction 속성은 form 요소의 enctype의 속성을 덮어쓰게 됨 
+
+formenctype 속성은 form 요소의 method 속성이 post일떄만 적용됨
+이 속성은 submit 타입과 image 타입에서만 사용할 수 있음
+ex)
+<form action="경로" method="post">
+  사용자 이름 입력해주세요 : <input type="text" name="name"><br>
+  <input type="submit" value="암호화 전송" formenctype="multipart/form-data"><br>
+</form>
+
+height와 width 속성
+<input>태그의 type 속성이 "image"일 경우에는 height 속성과 width 속성을 사용하여 이미지의 높이와 너비를 명시할 수 있음
+따라서 이 속성은 오직 image타입에서만 사용할 수 있음
+또한, 이미지를 클릭하면 클린한 곳의 x좌표와 y좌표가 x와 y라는 이름으로 같이 전송됨
+
+플러그인(Plug-in)
+HTML 플러그인이란 웹 브라우저의 표준 기능을 확장해 주는 프로그램을 의미 합니다.
+가장 널리 알려진 플러그인으로는 Java Applet,Flash Player, Pdf Reader 등이 있음
+이러한 플러그인은 object 요소나 embed 요소를 사용하여 HTML 문서에 추가할 수 있다.
+-----------------------------------------------------------------------------
+object 요소
+object 요소는 HTML문서에 삽입할 객체(object)를 명시하는데 사용함
+이 요소는 모든 웹 브라우저에 동작하며, 객체뿐만 아니라 또다른 HTML 문서를 삽입할 수도 있다.
+
+HTML5 API
+HTML5에서 새롭게 추가된 API는 모두 자바스크립트로 구현되어 있다.
+
+웹 스토리지(web storage)API
+웹 스토리지 API는 기존 쿠키의 문제점을 극복하기 위해 웹 브라우저가 직접 데이터(data)를 저장할 수 있게 해줌 
+
+HTML5 이전에는 응용 프로그램이 데이터를 ->요청(Request)할떄마다 매번 쿠키(cookie)라는 곳에 그정보를 저장
+하지만 웹 스토리지는 사용자 측에서 좀 더 많은 양의 정보를 안전하게 저장할 수 있도록 해줌
+웹 스토리지는 최소 5MB 이상의 많은 공간을 가지고 있으며, 이 정보는 절대 서버로 전송되지x 
+
+이러한 웹 스토리지는 오리진(origin)마다 단 하나씩만 존재 
+오리진(origin)이란 도메인(domain)과 프로토콜(protocol)의 한 쌍으로 이루어진 식별자
+따라서 하나의 오리진에 속하는 모든 웹 페이지는 같은 데이터(data)를 저장하며 또한 같은 데이터에 
+접근할 수 있다.
+
+
+Application Cache
+application cache API
+apolicaton cache API는 웹 응용 프로그램을 캐시(cache)하여, 인터넷 접속없이 사용자가 접근할 수 있게 해줌
+따라서 application cache를 사용하면 웹 응용 프로그램의 오프라인 버전을 쉽게 만들 수 있음
+
+application cache를 사용해서 생기는 장점은?
+
+오프라인 접속:사용자가 웹 응용 프로그램을 오프라인으로도 사용할 수 잇다.
+속도 : 캐시(cache)된 자원은 빠르게 로드(load)할 수 있다.
+서버의 부하 감소: 웹 브라우저는 서버의 자원에 변동이 있을 떄만 자원을 갱신하면 된다.
+
+
+Web Worker
+web worker API
+웹 페이지에서 스크립트가 실행되면,해당 웹 페이지는 실행 중인 스크립트가 종료될떄까지 응답 불가 상태가 된다.
+web worker는 스크립트가 웹 페이지의 성능에 영향을 미치지 않도록 백그라운드에서 동작하게 해주는 자바스크립트
+
+즉,web worker는 스크립트의 다중 스레드를 지원한다.
+따라서 사용자가 웹 페이지를 이용하면서도,동시에 시간이 오래 걸리는 자바스크립트 작업도 병행할 수 있도록 해줌
+
+
+
+
+
+
+
+
+
+
+
+이 내용은 TCP스쿨 내용을 보고 개인적으로 정리한 내용 입니다. 
+   
+
