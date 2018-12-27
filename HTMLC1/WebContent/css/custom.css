@@ -91,7 +91,7 @@ article {
   -ms-flex: 3;
   flex: 3;
   background-color: #f1f1f1;
-  background: url(../images/tr1.jpg);
+  background: url(../images/tr1.jpg);   opacity: 0.8; filter: alpha(opacity=80);
   background-size: cover;
   padding: 10px;
 }
