@@ -33,6 +33,8 @@ table,th,td {border:1px solid black; border-collapse:collapse;}
 } */
 a {text-decoration:none;}
 a:hover, a:active {color: #FF4500; }
+#h1::first-letter {color: #FF4500;
+			font-size: 2em;}
 .pp {font-size:45px;}
 .git {
 	position:relative;
