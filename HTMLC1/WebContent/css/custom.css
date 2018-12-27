@@ -33,7 +33,7 @@ table,th,td {border:1px solid black; border-collapse:collapse;}
 } */
 a {text-decoration:none;}
 a:hover, a:active {color: #FF4500; }
-.pp {width:auto; font-size:45px;}
+.pp {font-size:45px;}
 .git {
 	position:relative;
 	top:-65px;
@@ -48,6 +48,7 @@ a:hover, a:active {color: #FF4500; }
 	right:10px;
 	padding:10px;	
 }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
