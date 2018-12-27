@@ -310,21 +310,144 @@ ex)
 	<div class="down"></div>
 </body>
 
+크기 단위
+CSS에서 사용하는 크기의 단위에는 %,ex,px,cm,mm,inch등이 있다
+
+1.백분율 단위 기본 크기를 100%로 놓고, 그에 대한 상대적인 크기를 설정
+2.배수 단위em 해당 글꼴(font)의 기본 크기를 1em으로 놓고, 그에 대한 상대적인 크기를 설정함
+3.픽셀 단위px 픽셀 단위(px)는 스크린의 픽셀(pixel)을 기준으로 하는 절대적인 크기를 설정
+
+1배 = 1em = 100%
+
+크기(Demension)
+CSS를 이용하면 HTML요소의 크기를 마음대로 설정할 수 있다.
+CSS에서 크기 조절을 위해 사용할 수 있는 속성은 다음과 같다.
+
+1.height
+2.width
+3.max-width
+4.min-width
+5.max-height
+6.min-height
+
+height와 width 속성
+height와 width 속성은 HTML요소의 높이와 너비를 각각 설정함
+이 속성의 기본 설정값은 auto이며, 웹 브라우저가 각 HTML 요소에 맞게 자동으로 높이와 너비를 설정해 줌 
+
+ex)
+<style>
+	div { 
+		height:200px; width;500px; 
+		border:2px solid lightsalmon;
+	} 
+</style>
+
+max-width 속성
+max-width 속성은 해당 HTML 요소가 가질 수 있는 최대 너비(width)를 설정함
+이 속성의 기본 설정값은 nono이며, 해당 HTML 요소의 너비에 제한을 두지 않겠다는 의미
+
+width 속성으로 너비를 설정하면, 설정된 너비 이하로 브라우저의 크기가 줄어들 떄 해당 요소에 스크롤 바를 생성
+하지만 max-width 속성으로 너비를 설정하면 다음과 같이 좀 더 유연한 결과를 얻을 수 있다.
+max-width 속성으로 너비를 설정하면 줄어드는 웹 브라우저의 크기에 맞춰 해당 HTML요소의 너비도 자동으로 줄어듬
 
 
+max-height 속성
+max-height 속성은 해당 HTML 요소가 가질 수 있는 최대 높이(height)를 설정함
+이 속성의 기본 설정값은 none이며, 해당 HTML 요소의 크기에 따라 높이가 자동으로 설정됨
+
+max-hieght속성으로 최대 높이를 설정하면, 해당 HTML 요소의 높이를 설정된 높이 이하로 제한함 
+만약 해당 요소의 높이가 설정된 높이보다 클 경우에는 수직 스크롤 바를 생성하게 됨
+ex)
+<style>
+	p { max-height:50px; overflow:auto; }
+</style>
+
+박스 모델(box model)
+모든 HTML 요소는 박스(box)모양으로 구성되며, 이것을 박스 모델이라고 부름 
+박스 모델은 HTML 요소를 패딩(padding),테두리(border),마진(margin),그리고 내용(content)로 구분 
+
+1.내용(content): 텍스트나 이미지가 들어있는 박스의 실질적인 내용 부분 
+2.패딩(padding): 내용과 테두리 사이의 간격 패딩은 눈에 보이지x
+3.테두리(border): 내용과 패딩 주변을 감싸는 테두리 
+4.마진(margin): 테두리와 이웃하는 요소 사이의 간격 마진은 보이지x
+
+height와 width 속성의 이해 
+모든 웹 브라우저에서 정확하게 HTML요소들을 표현하려면 이러한 박스 모델이 어떻게 동작하는지 알아야 함
+CSS에서 height와 width 속성을 설정할 떄 그 크기가 가르키는 부분은 내용(content)부분만을 대상으로 함 
+HTML요소의 height와 widht 속성으로 설정된 높이와 너비에 패딩(padding),테두리(border),마진(margin)의 
+크기는 포함되지x
+
+ex)
+<style>
+	div {width:320px;
+	padding:10px;
+	border:5px solid red;
+	margin:0;
+	}
+</style>
+<body>
+	<div>div 요소 전체 너비는 350px 이됨  div요소에 너비 320 + padiing좌우 합 20 + border 좌우합 10</div>
+</body>
+
+HTML요소의 높이와 너비 구하기
+
+전체 너비(width)를 계산해 보면
+width(70px) + left margin(10px) + left padding(5px) + right padding(5px) + right margin(10px) = 100px 이 됩니다.
+
+HTML 요소의 전체 높이(height)를 계산하는 공식은
+height + top padding + bottom padding + top border + bottom border + top margin + bottom margin 입니다.
+
+이때 마진(margin)영역의 크기는 눈으로 바로 확인할 수 없을 것 
+why? 마진이란 테두리(border)와 이웃하는 요소 사이의 간격이면서, 배경색의 영향을 받지 않기 떄문 
+but HTML 요소가 차지하는 크기에는 포함됨
+
+익스8포함 이전 버젼에서는 width나 height 속성으로 설정한 너비와 높이에 패딩과 테두리의 크기까지 포함됨
+이러한 차이점 없애기 위해 HTML문서에 <!DOCTYPE html>태그를 삽입해야만 함
+
+패딩(padding)속성
+CSS에서는 HTML요소의 패딩 영역을 설정하기 위해 다음과 같은 속성을 제공
+1.padding-top
+2.padding-right
+3.padding-bottom
+4.padding-left
+
+패딩 축약표현(padding shorthand)
+모든 padding 속성을 이용한 스타일을 한 줄에 설정할 수 있다.
+ex)
+<style>
+	div{
+		background-color:red;  // div요소 배경색 
+		color:white; // div요소안에 글자색
+		border:3px solid blue;	// 가장자리 너비와 색깔	solid는 실선(가장자리 스타일)
+	}
+	div.ab{padding : 20px 50px 30px 50px;}
+ 			 top right bottom left
+</style>
+<body>
+	<div class="ab">패딩 축약형으로 적용</div>
+</body>
+
+마진(Margin)
+margin속성은 테두리(border)와 이웃하는 요소 사이의 간격인 마진 영역의 크기를 설정함 
+이러한 마진 영역은 패딩 영역과는 달리 background-color 속성으로 설정하는 배경색의 영향을 받지x
+CSS를 사용하면 마진 영역의 크기를 방향별로 따로 설정할 수 있다.
+
+margin 속성값에 auto를 사용하는 이유 
+
+margin 속성값을 auto로 설정하면,웹 브라우저가 수평 방향 마진(margin)값을 자동으로 설정함 
+즉,해당 HTML 요소의 왼쪽과 오른쪽  마진을 자동으로 설정함
+그 결과 해당요소는 그 요소를 포함하고 있는 부모(parent)요소의 정중앙에 위치하게 됨
+ex)
+<style>
+	div{
+		border:2px solid red;
+		width:350px;
+		margin:auto;
+	}
+</style>
 
 
-
-
-
-
-
-
-
-
-
-
-
+display 속성
 
 
 
