@@ -448,8 +448,46 @@ ex)
 
 
 display 속성
+display 속성은 웹 페이지의 레이아웃을 결정하는 CSS의 중요한 속성 중 하나
+display속성은 해당 HTML 요소가 웹 브라우저에 어떻게 보이는가를 결정
+
+대부분의 HTML 요소는 display 속성의 기본값으로 다음 두 가지 값중 하나의 값을 가짐
+1.블록
+display 속성값이 블록(block)인 요소는 언제나 새로운 라인에서 시작하며, 해당 라인의 모든 너비를 차지함
+<div> <h1> <p> <ul> <ol> <form>요소는 대표적인 블록 요소
 
 
+2.인라인
+display 속성값이 인라인요소는 새로운 라인에서 시작x
+또한,요소의 너비도 해당 라인 전체가 아닌 해당 HTML 요소의 내용(content)만큼 차지함
+
+<span> <a> <img> 요소는 대표적인 inline 요소
+
+
+display 속성의 기본 설정값의 변경 
+display 속성값을 변경해도, 실제로 해당 요소가 완전히 다른 타입의 요소로 바뀌는것은x
+즉,display 속성값을 인라인에서 -> 블록으로 변경했더라도, 변경된 요소는 다른요소를 포함x
+why? 처음부터 display 속성값이 블록인 요소만이 내부에 다른 요소를 포함할 수 있기 떄문
+
+인라인-블록
+인라인-블록 요소는 인라인 요소와 비슷하지만, 너비와 높이를 설정할 수 있다.
+또한, 블록 요소처럼 margin을 이용하여 여백을 지정할 수도 있게 된다.
+ex)
+<style>
+	<div>{ width:100px; height:50px; }
+	.first {background-colr: red;
+	.second {background-colr: blue;
+	
+	.inlune-block{ display:inline-block; }
+
+</style>
+<body>
+	<div class="first inline-block">인라인 블록
+	<div class="second inline-block">인라인 블록
+</body>
+
+위의 예제처럼 display 속성값이 인라인-블록으로 설정된 요소들은 인라인 요소처럼 한 줄로 늘어서게 됨 
+하지만 블록요소처럼 너비와 높이를 설정할 수 있게 됨
 
 
 
