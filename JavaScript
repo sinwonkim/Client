@@ -126,6 +126,19 @@ function myFirstFunc { //function은 함수의 정의를 위해 예약된 키워
 	var secondVar = 20; // var는 변수의 정의를 위해 예약된 키워드
 }
 
+자바스크립트 출력 
+자바스크립트는 여러 방법을 통해 결과물을 HTML페이지에 출력할 수 있다.
+자바스크립트에서 사용할 수 있는 출력 방법은 다음과 같다.
+1.window.alert()메소드
+2.HTML DOM 요소를 이용한 innerHTML 프로퍼티
+3.document.write()메소드
+4.console.log()메소드
+
+window.alert()메소드
+자바스크립트에서 가장 간단하게 데이터를 출력할 수 있는 방법은 window.alert()메소드를 이용하는 것 
+window.alert()메소드는 브라우저와는 별도의 대화 상자를 띄워 사용자에게 데이터를 전달해 줌 
+
+
 
 
 
