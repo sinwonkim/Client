@@ -189,13 +189,127 @@ function printDate(){
 또한,외부 자바스크립트 파일은 웹 브라우저가 미리 읽어 올 수 있어 웹 페이지의 로딩 속도 또한 빨라짐
 
 
+null과 undefined
+자바스크립트에서 null이란 object타입이며, 아직'값'이 정해지지 않은것을 의미
+또한,undefined란 null과는 달리 '타입'이 정해지지 않은 것을 의미
+따라서 자바스크립트에서 undefined는 초기화되지 않은 변수나 존재하지 않는 값에 접근할 때 반환됨
+
+ex)
+var num; // 초기화하지 않았으므로 undefined 값을 반환함
+var str = null; //object 타입의 null 값
+typeof secondNum // 정의되지 않은 변수에 접근하면 undefined값을 반환함
+
+null과 undefined는 동등 연산자== 와  일치연산자 ===로 비교할 때 그 결과값이 다르므로 주의해야 함
+null과 undefined는 타입을 제외하면 같은 의미지만,타입이 다르므로 일치하지 x
+ex)
+null == undefined; // true
+null === undefined; // false 
+
+객체(object)
+자바스크립트의 기본 타입은 객체(object)이다. 
+객체(object)란 실생활에서 우리가 인식할 수 있는 사물로 이해할 수 있다.
+객체는 여러 프로퍼티(property)나 메소드(method)를 같은 이름으로 묶어 놓은 일종의 집합체이다.
+
+var dog = { name:"해피",age:3}; //객체의 생성 
 
 
+타입변환(type conversion)
+자바스크립트는 타입 검사가 매우 유연한 언어
+자바스크립트의 변수는 타입이 정해져 있지 않으며, 같은 변수에 다른 타입의 값을 다시 대입할 수도 있다.
+
+ex)
+var num = 20; // Number 타입의 20
+num ="이십"; //String 타입의 "이십"
+var num; //한 변수에 여러 번 대입할 수는 있지만, 변수의 재선언은 할 수x 재선언문은 무시됨
 
 
+묵시적 타입변환(implicit type conversion)
+자바스크립트는 특정 타입의 값을 기대하는 곳에 다른 타입의 값이 오면,자동으로 타입을 변환하여 사용함
+
+명시적 타입변환(explicit type conversion)
+자바스크립트에서는 묵시적 타입 변환을 많이 사용하지만,명시적으로 타입을 변환할 방법도 제공함
+명시적 타입 변환을 위해 자바스크립트가 제공하는 전역함수는 다음과 같다.
+
+1.Number()
+2.String()
+3.Boolean()
+4.Obejct()
+5.paseInt()
+6.parseFloat()
+ex)
+Number("10") // 숫자10
+String(true) // 문자열 true
+Boolean(0); // 불리언 false
+Object(3); // new Number(3)와 동일한 결과로 숫자 3
 
 
+숫자를 문자열로 변환
+숫자 -> 문자열로 변환하는 가장 간단한 방법은 String()함수를 사용하는 것이다.
+또한,null과 undefined를 제외한 모든 타입의 값이 가지고 있는 toString()메소드를 사용할 수도 있다.
 
+메소드(method)란 객체의 프로퍼티 값으로 함수를 갖는 프로퍼티를 의미한다.
+
+객체(object)란?
+객체(object)란 실생활에서 우리가 인식할 수 있는 사물로 이해할 수 있다.
+객체의 예) 사과
+
+프로퍼티(property)
+apple.name ="애플"
+apple.family ="미국"
+apple.age=9
+apple.money=1000000000000000
+
+메소드(method)
+apple.mew()
+apple.eat()
+apple.sleep()
+
+apple객체는 모두 위와 같은 프로퍼티를 가지지만, 각 프로퍼티의 값은 인스턴스마다 전부 다를 것이다.
+
+자바스크립트 객체 
+자바스크립트의 기본 타입(data type)은 객체(object)이다.
+객체란 이름(name)과 값(value)로 구성된 프로퍼티(property)의 정렬되지 않은 집합 
+프로퍼티 값으로 함수가 올 수도 있는데, 이러한 프로퍼티를 메소드(method)라고 한다.
+
+ex)
+var cat="나비"; //일반적인 변수의 선언
+//객체도 많은 값을 가지는 변수의 하나이다.
+
+var kitty = {name:"나비",family:"고양이 가족",age:10};
+cat // 나비
+kitty.name // 나비
+
+객체의 프로퍼티 참조
+ex)
+객체이름.프로퍼티이름
+객체이름["프로퍼티이름"]
+
+객체의 메소드 참조
+객체이름.메소드이름()
+ex)
+var person = {
+	
+	name:"홍홍홍",
+	pld:"1234567",
+fulled:function(){
+   return this.birthday + this.pld;
+ }
+}
+person.fulled() // 홍홍홍1234567
+person.fulled; // function(){ return this.birthday + this.pld; }
+
+
+생성자를 이용한 객체의 생성 
+new 연산자를 사용하여 객체를 생성하고 초기화할 수 있다.
+이때 사용되는 메소드를 생성자(constructor)라고 하며, 이 메소드는 새롭게 생성되는 객체를 초기화하는 역할을
+한다. 
+자바스크립트는 원시 타입을 위한 생성자를 미리 정의하여 제공한다. 
+ex)
+var day = new Date(); // new연산자를 사용하여 Date타입의 객체를 생성함
+document.write("올해의"+day.getFullYear()+"년입니다.);
+
+위의 예제처럼 자바스크립트에서 제공하는 생성자를 사용할 수도 있으며, 사용자가 직접 객체 생성자 함수(object constructor function)를
+작성하여 사용할 수도 있다.
 
 
 
