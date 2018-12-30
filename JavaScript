@@ -1210,8 +1210,36 @@ ex)
 var text = document.getElementById("text");
 text.innerHTML = '이 문장으로 바꿈';
 
+HTML 요소의 속성 이름을 이용하면 속성값도 변경할 수 있다.
+ex)
+<body>
+	<a id="ptag" href="네이버링크">네이버</>
+	<button onclick="changelink">유튜브로 링크 변경</button>
+	
+	<script>
+	fuction changelink() {
+		var ptag = document.getElementById("ptag");
+		ptag.href = "유튜브링크"; // 해당 요소의 href 속성 변경
+		ptag.innerHTML = '유튜브 링크';
+		}
+	</script>
+</body>
 
 
+DOM 요소의 스타일 변경 
+HTML DOM을 이용하면 HTML요소의 스타일도 손쉽게 변경할 수 있다.
+style 프로퍼티를 이용하면 HTML 요소에 CSS스타일을 적용 
+<body>
+<h1>DOM요소의 스타일 변경</h1>
+<p id="textfont">텍스트 기본 색깔 블랙</p>
+<button onclick="textchange">텍스트 색깔변경</button>
+<script>
+function textchange{
+	var textfontchange = document.getElementById('textfont');
+	textfontchange.style.colr = 'blue';
+	}
+</script>
+</body>
 
 
 
