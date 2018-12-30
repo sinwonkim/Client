@@ -1019,7 +1019,14 @@ sort()메소드는 해당 배열의 배열 요소들을 알파벳 순서에 따�
 10.values()
 
 forEach()메소드
-forEach
+forEach()메소드는 해당 배열의 모든 요소에 대하여 반복적으로 명시된 콜백 함수를 실행함
+
+ex)
+var arr = [1,ture,'javascript'];
+function printArr(){
+	document.write()
+}
+
 
 
 
