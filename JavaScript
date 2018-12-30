@@ -819,14 +819,157 @@ type of strObj // object 타입
 4.String 객체
 5.Array 객체
 
+Nan(Not A Number)는 숫자가 아니라는 의미로,정의되지 않은 값이나 표현할 수 없는 값을 가리킴
+0을 0으로 나누거나,숫자로 변환할 수 없는 피연사자로 산술 연산을 시도하는 경우에 반환되는 읽기 전용 값
+
+ex)
+var x = 100 - "10" // "10은" 자동으로 숫자로 변환되어 계산됨
+var y = 100 - "문자열"; // "문자열"은 숫자로 변환할 수 없기 떄문에 NaN을 반환함
+자바스크립트의 전역 함수 중 하나인 isNaN()함수를 사용하면, 전달받은 값이 숫자인지 아닌지를 판단해 줌
+ex)
+var x = 100 * "문자열";
+if(isNaN(x)){
+	document.write("변수")
+} else {
+   document.write("변수 x의 값은 숫자입니다.");
+}
+자바스크립트에서는 약간은 비슷한 것 같으면서도 전혀 다른 4가지 값을 제공함 
+
+-null은 object타입이며, 아직 값이 정해지지 않은 것을 의미
+-undefined는 null과 달리 하나의 타입이며,'타입'이 정해지지 않은 것을 의미하는 값이기도 함 
+-NaN은 number타입이며, '숫자가 아님'을 의미하는 숫자 
+-infinity는 number 타입이며, 무한대를 의미
+
+toString()메소드 
+이 메소드는 Number 인스턴스의 값을 문자열로 반환한다.
+전달 받은 값에 해당하는 진법으로 우선 값을 변환한 후, 그 값을 문자열로 반환
+
+var num = 255; //Number인스턴스를 생성함 
+
+document.write(num); // 255 
+document.write(num.toString(2)); // 1111111
+document.write(3.14).toString // 3.14
+
+valueOf()메소드 
+이 메소드는 Number 인스턴스가 가지고 있는 값을 반환함
+원형
+numObj.valueOf() 
+
+var numObj  = new Number(123); // 123의 값을 가지고 있는 Number 인스턴스를 생성함 
+
+document.write(numObj.valueOf());
+
+Math 객체
+Math 객체는 수학에서 자주 사용하는 상수와 함수들을 미리 구현해 놓은 자바스크립트 표준 내장 객체 
+Math 객체는 다른 전역 객체와는 달리 생성자가 존재하지 않음 
+따라서 따로 인스턴스를 생성하지 않아도 Math 객체의 모든 메소드나 프로퍼티를 바로 사용할 수 있음 
+
+Math 메소드
+자바스크립트는 웹 페이지에서 수학적 작업을 손쉽게 할 수 있도록 다양한 Math 메소드를 제공하고 있다.
+가장 많이 사용되는 대표적인 Math 메소드는 다음과 같다.
+1.Math.min()
+2.Math.max()
+3.Math.random()
+4.Math.round()
+5.Math.floor()
+6.Math.ceil()
+7.Math.sin()
+
+대부분의 Math 메소드는 웹 브라우저마다 다른 결과값을 얻을 가능성이 높다.
+심지어 같은 자바스크립트 인터프리터라도 운영체제가 다르면 다른 결과값을 반환할 수 있다.
+따라서 아주 정확한 결과값이 필요한 작업에는 Math 메소드는 사용하지 않는것이 좋다.
 
 
+Math.floor()메소드 
+Math.floor()메소드는 인수로 전달받은 값과 같거나 작은 수 중에서 가장 큰 정수를 반환
+ex)
+<script>
+document.write(Math.floor(10.32)); //10 
+</script>
+
+Date 객체
+자바스크립트에서의 날짜 표현
+자바스크립트에서는 Date 객체를 사용하여 매 순간 변화하는 시간과 날짜에 관한 정보를 손쉽게 얻을 수 있다.
+Date 객체는 연월일,시분초의 정보와 함께 밀리초의 정보도 함께 제공한다.
+
+자바스크립트에서 날짜와 시간을 나타내기 위한 값의 범위는 다음과 같다.
+1.연도(year): 1900년(00) ~ 1999년(99)
+2.월(month):1월(0) ~ 12월(11)
+3.일(day):1일(1) ~ 31일(31)
+4.시(hours):0시(0) ~ 23시(230)
+5.분(minutes):0분(0) ~ 59분(59)
+6.초(seconds):0초(0) ~ 59초(59)
+
+자바스크립트에서 월(month)을 나타낼 떄는 1월이 0으로 표현되고,12월이 11로 표현된다는 사실에 유의해야 한다.
+
+Date 객체 
+자바스크립트에서 Date 객체를 초기화하는 방법은 다음과 같음
+1.new Date()
+2.new Date("날짜른 나타내는 문자열")
+3.new Date(밀리초)
+4.new Date(년,월,일,시,분,초,밀리초)
+
+Date 객체를 생성할 떄 어떠한 인수도 전달하지 않으면, 현재 날짜와 시간을 가지고 Date 객체를 생성함
+ex)
+
+var date = new Date(); // Date 객체 생성
+document.write(date);
+
+자바스크립트 날짜 양식(date format)
+자바스크립트에서 날짜를 표현할 수 있는 양식은 다음과 같다.
+
+1.ISO 날짜 양식
+2.Long 날짜 양식
+3.Short 날짜 양식
+4.Full 날짜 양식
+
+Date 메소드
+Date.now()메소드
+Date.now()메소드는 1970년부터 1월1일 0시 0분 0초부터 현재까지의 시간을 밀리초단위의 정수로 반환
+ex)
+var nowTime = new Date.now();
+
+Date.protype getter 메소드
+모든 Date 인스턴스는 Date.protype으로부터 메소드와 프로퍼티를 상속받음
+
+Date.prototype getter 메소드는 날짜와 관련된 정보를 받아오기 위한 메소드
+가장 많이 사용되는 대표적인 getter메소드는 다음과 같다.
+1.getFullYear() 연
+2.getDate() 일
+3.getDay() 월
+4.getTime() 시간
+
+배열을 사용하면 더욱 간단하게 요일을 출력할 수 있다.
+ex)
+
+var date = new Date()//인스턴스 생성 
+var datys = ['일','월','화','수','목','금','토'];
+document.write("오늘은"+days[date.getDay()])+"요일 입니다.");
 
 
+String 객체 
+자바스크립트에서 문자열은 보통 문자열 리터럴을 사용하여 표현함 
+but 문자열을 나타날 떄 new 연산자를 사용하여 명시적으로 String 객체를 생성할 수도 있다.
+이러한 String 객체는 문자열 값을 감싸고 있는 래퍼(Wrapper)객체이다.
 
+String 메소드 
+String 메소드는 String 객체에 정의된 문자열과 관련된 작업을 할 때 사용하는 메소드이다.
 
+String.prototype 메소드
+모든 String 인스턴스는 String.prototype으로부터 메소드와 프로퍼티를 상속받음
+이렇게 상속받은 String.prototype 메소드를 이용하면,다음과 같은 문자열 작업을 할 수 있다.
 
+문자열에서의 위치 찾기 
+다음 메소드는 String인스턴스에서 특정문자나 문자열이 처음으로 등장하는 위치나 마지막으로 등장하는 
+위치를 반환한다.
+-indexOf()
+-IastIndexOf()
 
+문자열 결합 concat() 메소드
+concat()메소드는 String 인스턴스에서 전달받은 문자열을 결합한 새로운 문자열을 반환한다.
+ex)
+var str = '자바스크립트';
+str.concat("컨캣 사용"); //자바스크립트 컨캣 사용 
 
 
 
