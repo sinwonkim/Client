@@ -1270,8 +1270,130 @@ HTML DOM에서 노드 간의 관계는 다음과 같은 프로퍼티로 정의�
 2.childNodes:자식 노드 리스트
 3.firstChild: 첫 번쨰 자식 노드
 4.lastChild: 마지막 자식노드
+5.nextSibling:다음 형제 노드
+6.previousSibling:이전 형제 노드
+
+노드에 대한 정보 
+노드에 대한 정보는 다음과 같은 프로퍼티를 통해 접근할 수 있다
+1.nodeNmae
+2.nodeValue
+3.nodeType
+
+이 프로퍼티들은 특별히 다른 인터페이스를 이용하지 않고도,해당 노드의 정보에 직접 접근할수 있는 방법을 제공한다.
+nodeName
+nodeName은 프로퍼티는 노드 고유의 이름을 저장하므로,수저할 수 없는 읽기 전용 프로퍼티이다.
+요소 노드의 nodeName프로퍼티는 언제나 해당 HTML요소의 태그 이름을 대문자로 저장
+
+문서노드document node #document
+요소노드element node 태그이름
+속성 노드attribute node  속성이름
+텍스트 노드 text node    #text
+
+ex)
+//HTML 문서의 모든 자식 노드 중에서 두 번 째 노드의 이름을 선택함
+document.getElemnetById("docuemnt").innerHTML = document.childNode[1].nodeName; //HTML
+
+//HTML 노드의 모든 자식 노드 중에서 첫 번째 노드의 이름을 선택함.
+docuemnt.getElementById("html").innerHTML = document.childNodes[1].childNodes[0].nodeName; // HEAD
+
+nodeValue
+nodeValue 프로퍼티는 노드의 값을 저장함
+  노드			
+element node    undefined
+attribute node    해당 속성의 속성값
+text node       해당 텍스트 문자열
 
 
+//예제
+아이디가 'heading'인 요소의 첫 번째 자식 노드의 노드값을 선택함
+<body>
+<p id="textp">p내용 </p>
+<p id="text1">내용 변경</p>
+</body>
+<script>
+var headingText = document.getElementById('textp').firstChild.nodeValue;
+document.getElementById('text1').firstChild.nodeValue = headingText;
+</script>
+
+빈 텍스트 노드의 처리
+현재 대부분의 주요 웹 브라우저는 모두 W3C DOM 모델을 지원하지만, 그 처리 방식에 있어 약간씩의 차이가 있다.
+그중에서도 가장 큰 차이점은 띄어쓰기와 줄 바꿈을 처리하는 방식이다.
+파이어 폭스나 기타 브라우저들은 띄어쓰기나 줄 바꿈을 텍스트 노드(text node)로 취금함
+하지만 익스플로러는 띄어쓰기나 줄 바꿈을 텍스트 노드로 취급하지 않는다.
+따라서 자식 노드나 형제 노드를 이용하여 원하는 노드에 접근하려고 하면 브라우저 간에 차이가 발생함
+이 차이를 가장 없애는 가장 쉬운 방법은 nodeType프로퍼티를 사용하여 선택된 요소의 타입을 검사하는 것
+
+노드 리스트(node list)
+노드 리스트는 getElementByTagName()메소드나 childNodes 프로퍼티의 값으로 반환되는 객체 
+이 객체는 HTML문서와 같은 순서로 문서 내의 모든 노드를 리스트 형태로 저장하고 있다.
+ex)
+// 아이디가 "list"인 요소의 모든 자식 노드들을 선택함
+var listItems =  document.getElementById("list").childNodes;
+// 
+listItems[1].firstChild.nodeValues = "HTML 요소의 내용을 변경함";
+
+노드의 추가 
+다음 메소드를 사용하면 특정 위치에 새로운 노드를 추가할 수 있다.
+
+1.appendChild()
+2.insertBefore()
+3.insertDate()
+
+appendChild()메소드
+appendChild()메소드는 새로운 노드를 해당 노드의 자식 노드 리스트의 맨 마지막에 추가함
+ex)
+<body>
+	<li id="addlist">4<li>
+	<div>
+		<ul id="list">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</div>
+	<button onclick="listadd()">list 노드 추가하기</button>
+</body>
+<script>
+function listadd(){
+	var list = document.getElementById('list');
+	var addlist = document.getElementById('addlist');
+	list.appendChild(addlist);
+}
+</script>
+요소에 id값 붙이고 id값으로 접근하여 부모 노드쪽에 appendChild()메소드 사용하여 추가해주는 형식
+
+insertBefore()메소드
+insertBefore()메소드는 새로운 노드를 특정 자식 노드 바로 앞에 추가 함
+insertBefore()메소드의 원형은 다음과 같다.
+원형
+부모노드.insertBefore(새로운자식노드,기준자식노드);
+
+1.새로운 자식 노드:자식 노드 리스트(child node list)에 새롭게 추가할 자식 노드를 전달함
+2.기준 자식 노드:새로운 노드를 삽입할 때 기준이 되는 노드로,이 노드 바로 앞에 새로운 노드가 추가됨
+ex)
+<body>
+	<h1>노드기준점으로 자식노드 앞 추가하는 insertBefore()메소드 사용하기</h1>
+	<li id="addcontent">추가할 내용</li>
+	<ul id="list">
+		<li>1</li>
+		<li id="childNodeposition">2</li>
+		<li>3</li>
+	</ul>
+	<button onclick="">부모기준 자식노드앞 추가</button>
+</body>
+<script>
+	function addNode(){
+		var list = document.getElementById('list'); // id가 list인 요소를 선택
+		var childNode = document.getElementById("childNodeposition"); //id가 childNodeposition인 요소를 선택
+		var addcontent = document.getElementById('addcontent'); // id가 addcontent인 요소를 선택
+		list.insertBefore(addcontent,childNode);
+	}
+</script>
+result
+1
+추가할 내용
+2
+3
 
 
 
