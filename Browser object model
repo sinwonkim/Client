@@ -55,7 +55,86 @@ location 객체의 assign()메소드는 브라우저 창에 지정된 URL 주소
 반면에 replace()메소드는 새 문서를 불러오기 전에, 현재 문서를 브라우저의 히스토리에서 제거한다는 점이
 assign()메소드와 다름 location 객체의 reload()메소드는 브라우저 창에 현재 문서를 다시 불러옴
 
-History 
+History 객체
+history 객체는 브라우저의 히스토리 정보를 문서와 문서 상태 목록으로 저장하는 객체이다.
+자바스크립트는 사용자의 개인 정보를 보호하기 위해 이 객체에 접근하는 방법을 일부 제한하고 있다.
+
+Screen객체 
+screen 객체는 사용자의 디스플레이 화면에 대한 다양한 정보를 저장하는 객체
+ex)
+<script>
+  document.write(screen.width);
+  document.write(screen.height);
+  document.wirte(window.outerWidth);
+  document.wirte(window.outerHeight);
+</script>
+
+실제 사용할 수 있는 화면 크기
+screen 객체의 availWidth와 availHeight 프로퍼티는 실제 사용할 수 있는 화면의 크기를 픽셀 단위로 반환
+이 프로퍼티는 운영체제의 작업 표시줄과 같은 공간을 모두 제외한 크기를 반환함
+ex)
+document.write(screen.availWidth); // 실제사용할 수 있는 화면의 너비
+document.write(screen.availHeight); // 실제 사용할 수 있는 
+
+Navigator 객체
+navigator 객체는 브라우저 공급자 및 버전 정보등을 포함한 브라우저에 대한 다양한 정보를 저장하는 객체
+이 객체의 이름은 넷스케이프의 초기 웹 브라우저였던 네비게이터에서 유래됨
+
+쿠키 사용 여부 
+navigator 객체의 cookieEnabled 프로퍼티는 현재 사용중인 브라우저가 쿠키를 사용할 수 있는지를 검사하는 
+비표준 프로퍼티입니다.
+<script>
+
+  document.write('현재 브라우저는 쿠키를');
+if(navigator.cookieEnablued){
+  document.write('사용할 수 있다.')
+}
+</script>
+
+대화상자(dialog box)
+사용자에게 보여줄 수 있는 간단한 대화 상자를 만들기 위해 widnow객체는 다음과 같은 메소드를 제공함
+
+1.alert()
+2.confirm()
+window객체의 confirm()메소드는 사용자에게 간단한 메시지를 보여주고,사용자가 확인이나 취소를 누르면 그 결과를 불리언
+값으로 반환함 
+3.prompt()
+
+
+타이머
+widnow 객체는 일정 시간이 지난 뒤에 함수를 호출할 수 있도록 다음 메소드를 제공함
+1.setTimeout()
+setTimeout()메소드는 명시된 시간이 지난 뒤에 지정된 함수를 호출함
+
+문법
+widnow.setTimeout(호출할함수,지연시간);
+
+이 메소드가 성공적으로 호출되면,설정된 timeoutID를 반환함
+이 메소드는 밀리초단위로 시간을 설정할 수 있다.
+또한, 이렇게 설정된 함수의 호출을 취소할 수 있도록 다음 메소드를 제공함
+2.setInterval()
+setInterval()메소드는 지정된 시간 간격마다 함수를 반복적으로 호출함
+
+문법
+window.setInterval(호출함함수,지연시간);
+이 메소드가 성공적으로 호출되면,설정된 timeoutID를 반환함
+이 메소드는 밀리초(miliseconds)단위로 시간 간격을 설정할 수 있다.
+ex)
+<p id="here"></p>
+<button onclick="startInterval()"></button>
+<body>
+
+</body>
+<script>
+  function startInterval() {
+    setInterval(펑션,2000);
+  }
+  fucntion printCurrentDate(){
+    document.getElelementById('here').innerHTML =new Date();   // Date() 인스턴스 하나 만들어서 넣어줌 p태그 id쪽으로 
+  }
+</scirpt>
+3.clearTimeout()
+4.clearInterval()
 
 
 
