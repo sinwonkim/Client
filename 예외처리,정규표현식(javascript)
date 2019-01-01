@@ -1,0 +1,184 @@
+예외(exception)
+예외란 프로그램이 실행 중에 발생하는 런타임 오류를 의미
+이러한 예외가 발생하지 않도록 미리 방지하는것도 중요 but 발생한 예외를 처리하는 방법 또한 매우 중요
+
+예외를 발생시킨다는 것은 명시적으로 오류를 발생시킨다는 의미뿐만 아니라 예외 상황을 알린다는 의미도 있다.
+
+자바스크립트에서는 throw 키워드를 사용하여 예외를 발생시킬 수 있다.
+문법
+throw 표현식;
+표현식에는 예외 코드를 나타내는 숫자나 오류 메시지를 담고 있는 문자열,Error 객체 등이 올 수 있다.
+
+
+예외처리
+자바스크립트에서는 프로그램이 실행되는 도중 발생하는 예외를 처리하기 위해 try/catch/finally 문을 사용함
+
+문법
+try {
+  예외를 처리하길 원하는 실행 코드;
+}catch(ex){
+  예외가 발생할 경우에 실행될 코드;
+}finally {
+  try 블록이 종료되면 무조건 실행될 코드;
+}
+1.try 블록: 기본적으로 맨 먼저 실행되는 코드이며, 여기에서 발생한 예외는 catch 블록에서 처리될 수 있다.
+2.catch 블록: try 블록에서 발생한 예외 코드나 Error 객체를 인수로 전달받아 그 처리를 담당함
+3.finally블록: 이 블록은 try블록에서 예외가 발생하건 안 하건 맨 마지막에 무조건 실행됨
+
+catch블록과 finally블록은 선택적인 옵션으로 반드시 사용할 필요가x
+따라서 사용할 수 있는 모든 적합한 try구문은 다음과 같다.
+
+적절한 try 구문
+1.try / catch
+2.try / finally
+3.try / catch / finally
+
+Error 객체
+자바스크립트에서는 런타임 오류가 발생할 떄마다 Error객체의 인스턴스가 만들어져 해당 오류의 정보를 저장함
+
+strict 모드
+ECMAScript5에서 처음으로 소개된 strict 모드는 자바스크립트 코드에 더욱 엄격한 오류 검사를 적용해줌
+strict모드는 스크립트나 함수의 맨 처음에 "use strict"지시어를 사용하여 선언할 수 있다.
+
+ex)
+<body>
+  <p id="text"></p>
+</body>
+   <script>
+     "use strict"
+       try(){
+         num = 3.14; // 선언되지 않은 변수를 사용했기 때문에, 에러 발생함
+        } catch(ex) {
+            document.getElementById('text').innerHTML = ex.name;    // ReferenceError
+            document.getElementById('text').innerHTML += ex.message; // num is not defined
+        }
+    </script>
+
+정규 표현식(regular expression)이란?
+정규 표현식은 문자열에서 특정한 규칙을 가지는 문자열의 집합을 찾아내기 위한 검색 패턴
+이러한 검색 패턴은 모든 종류의 문자열 검색이나 교체 등의 작업에서 사용할 수 있다.
+
+1. 정규 표현식 리터럴을 이용한 생성
+2. RegExp 객체를 이용한 생성
+자바스크립트에서 정규 표현식 리터럴은 다음 문법을 사용하여 표현함 
+
+문법
+/검색패턴/플래그
+
+정규 표현식 리터럴은 슬래시(/)기호로 시작하여,슬래시(/)기호로 끝남
+또한,필요에 따라 플래그를 추가하여 기본 검색 설정을 변경할 수도 있다.
+
+ex)
+<body>
+<p id="text"></p>
+</body>
+<script>
+  var regStr = /a+bc/;  // 정규표현식 리터럴을 이용한 생성
+  var regObj = new RegExp("a+bc"); //RegExp 객체를 이용한 생성
+  document.getElementById("text").innerHTML = regStr +regObj;
+</script>
+
+단순한 패턴 검색
+정규 표현식을 사용하여 단순한 패턴을 검색하고자 할 때는 찾고자 하는 문자열을 직접 나열하면 됨
+예를 들어, 다음과 같은 정규 표현식은 정확히 "abc"라는 문자열만이 일치할 것이다.
+/abc/
+
+ex)
+<body>
+  <h1>단순한 패턴검색</h1>
+   <p id="text"></p>
+</body>
+    <script>
+      var targetStr = '123 456 123 123 123123123123123'; 
+      var regEx1 = /123/; // 3
+      var regEx2 = /12/; // -1 부분 문자열 찾지 못하면 -1 반환
+      document.write(targetStr.search(regEx1));
+      document.write(targetStr.search(regEx2));
+    </script>
+
+플래그 (flags)
+정규 표현식을 생성할 때 플래그를 사용하여 기본 검색 설정을 변경할 수 있다.
+이렇게 설정된 플래그는 나중에 추가되거나 삭제될 수 없다.
+
+플래그
+i 검색 패턴을 비교할 때 대소문자를 구분하지 않도록 설정함
+g 검색 패턴을 비교할 때 일치하는 모든 부분을 선택하도록 설정함
+m 검색 패턴을 비교할 때 여러줄의 입력 문자열을 그 상태 그대로 여러 줄로 비교하도록 설정함
+y 대상 문자열의 현재 위치부터 비교를 시작하도록 설정함
+
+
+특수문자
+정교 표현식을 사용하여 단순한 패턴을 검색하고자 할 떄는 찾고자 하는 문자열을 직접 나열하면 됨
+하지만 숫자만을 검색하거나,띄어쓰기를 찾는 등 정확히 일치하는 패턴보다 더 복잡한 조건을 사용하려면 특수 문자를 사용해야 한다.
+
+RegExp 객체
+RegExp 객체는 정규 표현식을 구현한 자바스크립트 표준 내장 객체이다.
+RegExp 객체를 생성하는 문법은 다음과 같다.
+
+문법
+new RegExp(검색패턴[,플래그]);
+
+1.검색 패턴을 나타내는 정규 표현식은 따옴표나 슬래시(/)로 감싸야 한다.
+2.기본 검색 설정을 변경할 수 있는 플래그는 필요한 떄만 전달할 수 있다.
+
+RegExp.prototype 메소드
+모든 RegExp 인스턴스는 RegExp.prototype으로부터 메소드와 프로퍼티를 상속받을 수 있다.
+이렇게 상속받은 RegExp.prototype 메소드를 사용하여 정규 표현식을 표현할 수 있다.
+
+1.RegExp.prototype.exec()
+2.RegExp.prototype.test()
+
+exec()메소드
+exec()메소드는 인수로 전달된 문자열에서 특정 패턴을 검색하여, 패턴과 일치하는 문자열을 반환
+만약에 패턴과 일치하는 문자열이 없으면 null을 반환함
+
+ex)
+<body>
+  <p id="text"></p>
+</body>
+<script>
+var targetStre = "abbascd";
+var fResult = /ab+/.exec(targetStre); // 패턴과 일치하는 문자열 반환 abb
+var sResult = /abb+/.exec(targetStre); // 패턴과 일치하는 문자열 반환 abb  일치하는 문자열 없을시 null
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
