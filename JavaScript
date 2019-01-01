@@ -1459,27 +1459,26 @@ function changenode(){
 }
 </script>
 
+속성 노드의 값 변경 
+속성 노드는 nodeValue프로퍼티뿐만 아니라 setAttribute()메소드를 사용하여 값을 변경할 수 있다.
+setAttribute()메소드는 속성값을 변경하려는 속성이 존재하지 않으면, 먼저 해당 속성을 생성한 후에 속성값을 설정
+ex)
+<style>
+	.para {
+		background-color: orange;
+	}
+<style>
+<body>
+<p>여기에 클래스 적용 속성값 변경</>
+<button onclick="changeAttribute()">속성 변경</button>
+</body>
+<script>
+var para;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function changeAttribute(){
+document.getElementsByTagName("p")[0].setAttribute("class","para");
+}
+</script>
 
 
 
