@@ -8,6 +8,7 @@
 	<h1>Object</h1>
 	<h2>Create</h2>
 	<script>
+		// 객체 
 		var coworker = {
 			"programmer" : "Dave",
 			"designer" : "Lisa"	
@@ -18,6 +19,21 @@
 		document.write('데이터베이스관리자'+coworker.dba+'<br>');
 		coworker["data sientist"] = 'jefri';
 		document.write('데이터 과학자  : '+coworker["data sientist"]+'<br>');
+	</script>
+	<h2>iterate</h2>
+	<script>
+		for (var key in coworker) {
+			  document.write(key +" : "+coworker[key]+'<br>');
+			}
+	</script>
+	<h2>Property&Method</h2>
+	<script>//객체에 함수 추가하고 싶다.
+		coworker.showAll = function() {
+			for (var key in this) {
+				  document.write(key +" : "+this[key]+'<br>');
+			}
+		}
+		coworker.showAll();
 	</script>
 </body>
 </html>

@@ -59,5 +59,1442 @@ String(문자열)
 Symbol(new in ECMAScript 6)
 and Object(객체)                         
 
+자바스크립트 
+자바스크립트(JavaScript)는 객체(object)기반의 스크립트 언어 
+HTML로는 웹의 내용을 작성하고,CSS로는 웹을 디자인하며,자바스크립트로는 웹의 동작을 구현할 수 있다.
+자바스크립트로는 주로 웹 브라우저에서 사용되나,Node.js와 같은 프레임워크를 사용하면 서버측 프로그래밍에서도 사용할 수 있다.
+현재 컴퓨터나 스마트폰 등에 포함된 대부분의 웹 브라우저에는 자바스크립트 인터프리터가 내장되어 있다.
+
+자바스크립트 특징
+1.자바스크립트 객체 기반 스크립트 언어
+2.자바스크립트 동적이며,타입을 명시할 필요 x 인터프리터 언어
+3.자바스크립트 객체 지향형 프로그래밍과 함수형 프로그래밍을 모두 표현할 수 있다.
+
+c언어와 같은 언어는 소스 파일을 작성한 후,해당 파일을 컴파일하여 사용자가 실행할 수 있는 실행파일(.exe)로 만들어 사용한다.
+하지만 인터프리터 언어는 이러한 컴파일 작업을 거치지 않고, 소스 코드를 바로 실행할 수 있는 언어를 의미 
+자바스크립트는 웹 브라우저에 포함된 자바스크립트 인터프리터가 소스 코드를 직접 해석하여 바로 실행해 준다.
+
+자바와 자바스크립트
+자바와 자바스크립트는 그 이름만 놓고 보면 서로 관련이 있는 언어로 생각되기 쉽다.
+하지만 두 언어는 서로 직접적인 관련은 없으며, 비슷한 점보다는 다른점이 훨씬 많다.
+문법상 비슷한 부분은 두 언어의 문법이 모두 C언어를 기반으로 만들어졌기 떄문 
+
+
+자바
+-컴파일 언어
+-타입 검사 엄격
+-클래스 기반의 객체 지향 언어 
+
+자바스크립트
+-인터프리터언어(컴파일 작업 거치지 않고, 소스 코드를 바로 실행할 수 있는 언어 의미)
+-타입 명시x
+-프로토타입 기반의 객체 지향 언어
+
+자바스크립트 소개 
+1.자바스크립트는 HTML의 '내용'을 변경할 수 있다.
+2.자바스크립트는 HTML의 '속성'을 변경할 수 있다.
+3.자바스크립트는 HTML의 '스타일'을 변경할 수 있다.
+
+프로그램이란
+프로그램은 컴퓨터가 실행할 수 있는 명령(instruction)으로 이루어짐
+컴퓨터 프로그래밍에서 컴퓨터가 실행할 수 있는 명령들을 실행문(statement)라고 합니다.
+즉,프로그램이란 특정 결과를 얻기 위해서 컴퓨터에 의해 실행되는 실행문의 집합이라고 함 
+
+자바스크립트 문법
+자바스크립트의 실행문은 세미콜론; 으로 구분됨
+변수의 선언은 var 키워드로만 할 수 있음 
+ex)
+var x = 10;
+var result = x+3;
+자바스크립트는 대소문자를 구분함 
+자바스크립트에서 변수나 함수의 이름,예약어 등을 작성하거나 사용할 떄에는 대소문자를 정확히 구분해서 사용해야 함
+
+리터럴(literal)
+리터럴은 직접 표현되는 값 그 자체를 의미함 
+
+식별자(identifier)
+식별자는 변수나 함수의 이름을 작설할 떄 사용하는 이름을 의미
+
+
+키워드
+자바스크립트에서는 몇몇 단어들을 특별한 용도로 사용하기 위해 미리 예약하고 있음
+이렇게 미리 예약된 단어들을 키워드(keyword)또는 예약어(reserved word)라고 한다.
+이러한 키워드들은 프로그램 내에서 식별자로 사용할 수 x
+ex)
+var fristVar = 10; //var는 변수의 정의를 위해 예약된 키워드 
+function myFirstFunc { //function은 함수의 정의를 위해 예약된 키워드
+	var secondVar = 20; // var는 변수의 정의를 위해 예약된 키워드
+}
+
+자바스크립트 출력 
+자바스크립트는 여러 방법을 통해 결과물을 HTML페이지에 출력할 수 있다.
+자바스크립트에서 사용할 수 있는 출력 방법은 다음과 같다.
+1.window.alert()메소드
+2.HTML DOM 요소를 이용한 innerHTML 프로퍼티
+3.document.write()메소드
+4.console.log()메소드
+
+window.alert()메소드
+자바스크립트에서 가장 간단하게 데이터를 출력할 수 있는 방법은 window.alert()메소드를 이용하는 것 
+window.alert()메소드는 브라우저와는 별도의 대화 상자를 띄워 사용자에게 데이터를 전달해 줌 
+
+HTML DOM요소를 이용한 innerHTML 프로퍼티 
+실제 자바스크립트 코드에서 출력을 위해 가장 많이 사용되는 방법은 HTML DOM 요소를 이용한 innerHTML 프로퍼티를 이용하는
+방법 이다.
+
+우선 document 객체의 getElementByID()나 getElementByTagName()메소드를 사용하여 HTML요소를 선택한다.
+그리고 innerHTML 프로퍼티를 이용하면 선택된 HTML요소의 내용이나 속성값 등을 손쉽게 변경할 수 있다.
+
+ex)
+<scirpt>
+	var str = document.getElementByID("text");
+	str.innerHTML = "이 문장 바꾼다";
+</script>
+
+document.write() 메소드
+document.write()메소드는 웹 페이지가 로딩될 떄 실행되면,웹 페이지에 가장 먼저 데이터를 출력
+따라서 document.write()메소드는 대부분 테스트나 디버깅을 위해 사용됨
+but 웹 페이지의 모든 내용이 로딩된 후에 document.write()메소드가 실행되면, 웹 페이지 내에 먼저 로딩된
+모든 데이터를 지우고 자신의 데이터를 출력하게 됨 
+따라서 documnet.write()메소드를 테스트 이외의 용도로 사용할 떄에는 충분히 주의해서 사용해야 한다.
+
+console.log()메소드
+console.log()메소드는 웹 브라우저의 콘솔을 통해 데이터를 출력해 줌 
+대부분의 주요 웹 브라우저에서는 f12를 누른후,메뉴에서 콘솔을 클릭하면 콘솔 화면을 사용할 수 있다.
+이러한 콘솔 화면을 통한 데이터의 출력은 좀 더 자세한 사항까지 출력되므로,디버깅하는데 많은 도움을 준다.
+
+자바스크립트를 적용하는 방법
+HTML문서에 자바스크립트 코드를 적용하는 방법에는 다음과 같은 방법 있다.
+1.내부 자바스크립트 코드로 적용
+<script></script>태그를 사용하여 HTML문서 안에 삽입할 수 있다.
+documnet.getElementById("text").innerHTML ="문자를 삽입할 수 있다.";
+이렇게 삽입된 자바 스크립트 코드는HTML <head>태그나 <body>태그,또는 양쪽 모두에 위치할 수 있다.
+
+2.외부 자바스크립트 파일로 적용
+외부자바스크립트 코드는 HTML 문서의 내부뿐만 아니라 외부 파일로 생성하여 삽입할 수도 있다.
+외부에 작성된 자바스크립트 파일은 .js 확장자를 사용하여 저장한다.
+해당 자바스크립트 파일을 적용하고 싶은 모든 웹 페이지에 <script>태그를 사용해 외부 자바스크립트 
+파일을 포함하면 된다.
+
+externaljs.js
+function printDate(){
+	document.getElemnetById("date").innerHTML = Date();
+}
+
+
+요렇게 하면됨
+외부 자바스크립트 파일을 사용하면 웹의 내용을 담당하는 HTML 코드로부터 웹의 동작을 구현하는 자바스크립트 코드를
+분리할 수 있다. 
+이렇게 하면 HTML코드와 자바스크립트 코드를 각각 읽기도 편해지고, 유지 보수도 쉬워진다.
+또한,외부 자바스크립트 파일은 웹 브라우저가 미리 읽어 올 수 있어 웹 페이지의 로딩 속도 또한 빨라짐
+
+
+null과 undefined
+자바스크립트에서 null이란 object타입이며, 아직'값'이 정해지지 않은것을 의미
+또한,undefined란 null과는 달리 '타입'이 정해지지 않은 것을 의미
+따라서 자바스크립트에서 undefined는 초기화되지 않은 변수나 존재하지 않는 값에 접근할 때 반환됨
+
+ex)
+var num; // 초기화하지 않았으므로 undefined 값을 반환함
+var str = null; //object 타입의 null 값
+typeof secondNum // 정의되지 않은 변수에 접근하면 undefined값을 반환함
+
+null과 undefined는 동등 연산자== 와  일치연산자 ===로 비교할 때 그 결과값이 다르므로 주의해야 함
+null과 undefined는 타입을 제외하면 같은 의미지만,타입이 다르므로 일치하지 x
+ex)
+null == undefined; // true
+null === undefined; // false 
+
+객체(object)
+자바스크립트의 기본 타입은 객체(object)이다. 
+객체(object)란 실생활에서 우리가 인식할 수 있는 사물로 이해할 수 있다.
+객체는 여러 프로퍼티(property)나 메소드(method)를 같은 이름으로 묶어 놓은 일종의 집합체이다.
+
+var dog = { name:"해피",age:3}; //객체의 생성 
+
+
+타입변환(type conversion)
+자바스크립트는 타입 검사가 매우 유연한 언어
+자바스크립트의 변수는 타입이 정해져 있지 않으며, 같은 변수에 다른 타입의 값을 다시 대입할 수도 있다.
+
+ex)
+var num = 20; // Number 타입의 20
+num ="이십"; //String 타입의 "이십"
+var num; //한 변수에 여러 번 대입할 수는 있지만, 변수의 재선언은 할 수x 재선언문은 무시됨
+
+
+묵시적 타입변환(implicit type conversion)
+자바스크립트는 특정 타입의 값을 기대하는 곳에 다른 타입의 값이 오면,자동으로 타입을 변환하여 사용함
+
+명시적 타입변환(explicit type conversion)
+자바스크립트에서는 묵시적 타입 변환을 많이 사용하지만,명시적으로 타입을 변환할 방법도 제공함
+명시적 타입 변환을 위해 자바스크립트가 제공하는 전역함수는 다음과 같다.
+
+1.Number()
+2.String()
+3.Boolean()
+4.Obejct()
+5.paseInt()
+6.parseFloat()
+ex)
+Number("10") // 숫자10
+String(true) // 문자열 true
+Boolean(0); // 불리언 false
+Object(3); // new Number(3)와 동일한 결과로 숫자 3
+
+
+숫자를 문자열로 변환
+숫자 -> 문자열로 변환하는 가장 간단한 방법은 String()함수를 사용하는 것이다.
+또한,null과 undefined를 제외한 모든 타입의 값이 가지고 있는 toString()메소드를 사용할 수도 있다.
+
+메소드(method)란 객체의 프로퍼티 값으로 함수를 갖는 프로퍼티를 의미한다.
+
+객체(object)란?
+객체(object)란 실생활에서 우리가 인식할 수 있는 사물로 이해할 수 있다.
+객체의 예) 사과
+
+프로퍼티(property)
+apple.name ="애플"
+apple.family ="미국"
+apple.age=9
+apple.money=1000000000000000
+
+메소드(method)
+apple.mew()
+apple.eat()
+apple.sleep()
+
+apple객체는 모두 위와 같은 프로퍼티를 가지지만, 각 프로퍼티의 값은 인스턴스마다 전부 다를 것이다.
+
+자바스크립트 객체 
+자바스크립트의 기본 타입(data type)은 객체(object)이다.
+객체란 이름(name)과 값(value)로 구성된 프로퍼티(property)의 정렬되지 않은 집합 
+프로퍼티 값으로 함수가 올 수도 있는데, 이러한 프로퍼티를 메소드(method)라고 한다.
+
+ex)
+var cat="나비"; //일반적인 변수의 선언
+//객체도 많은 값을 가지는 변수의 하나이다.
+
+var kitty = {name:"나비",family:"고양이 가족",age:10};
+cat // 나비
+kitty.name // 나비
+
+객체의 프로퍼티 참조
+ex)
+객체이름.프로퍼티이름
+객체이름["프로퍼티이름"]
+
+객체의 메소드 참조
+객체이름.메소드이름()
+ex)
+var person = {
+	
+	name:"홍홍홍",
+	pld:"1234567",
+fulled:function(){
+   return this.birthday + this.pld;
+ }
+}
+person.fulled() // 홍홍홍1234567
+person.fulled; // function(){ return this.birthday + this.pld; }
+메소드를 참조할때 메소드 이름뒤에 괄호를 붙이지 않으면, 메소드가 아닌 프로퍼티 그자체를 참조하게되서 메소드 정의 그 자체가 반환
+
+객체의 생성 
+자바스크립트에서 객체를 생성하는 방법은 다음과 같다
+1.리터럴 표기를 이용한 방법
+2.생성자 함수를 이용한 방법
+3.Object.create()메소드를 이용한 방법
+
+위와 같은 방법으로 생성되어 메모리에 대입된 객체를 인스턴스라고 한다.
+
+1.리터럴 표기를 이용한 객체 생성 
+ex)
+var 객체이름 = {프로퍼티1이름:프로퍼티1값,프로퍼티2이름:프로퍼티2값};
+
+2.생성자를 이용한 객체의 생성 
+new 연산자를 사용하여 객체를 생성하고 초기화할 수 있다.
+이때 사용되는 메소드를 생성자(constructor)라고 하며, 이 메소드는 새롭게 생성되는 객체를 초기화하는 역할을
+한다. 
+자바스크립트는 원시 타입을 위한 생성자를 미리 정의하여 제공한다. 
+ex)
+var day = new Date(); // new연산자를 사용하여 Date타입의 객체를 생성함
+document.write("올해의"+day.getFullYear()+"년입니다.);
+
+위의 예제처럼 자바스크립트에서 제공하는 생성자를 사용할 수도 있으며, 사용자가 직접 객체 생성자 함수(object constructor function)를
+작성하여 사용할 수도 있다.
+
+3.Object.create()메소드를 이용한 객체의 생성 
+Object.create()메소드를 이용하여 객체를 생성할 수 있다.
+Object.create()메소드는 지정된 프로토타입객체와 프로퍼티를 가지고 새로운 객체를 만들어 준다. 
+ex)
+Object.create(프로토타입객체 ,{새로운객체의프로퍼티1},{새로운객체의프로퍼티2});
+
+<script>
+	var obj = Object.create(null,{
+	 x:{value:100,enumerable:true},
+	 y: {vlaue:200,enumerable:true}
+	});
+	
+	document.write(obj.x); // 100
+	document.write(obj.y); // 200
+</script>
+
+프로토타입
+상속(inheritance)
+상속이란 새로운 클래스에서 기존 클래스의 모든 프로퍼티와 메소드를 사용할 수 있는것을 의미
+상속을 통해 새로운 프로그램의 요구에 맞게 기존 클래스를 수정하여 재사용할 수 있다.
+또한, 클래스 간의 종속 관계를 형성함으로써 객체의 관계를 조직화할 수 있는 장점이 있다.
+따라서 이러한 상속은 추상화,캡슐화와 더불어 객체 지향 프로그래밍을 구성하는 중요한 특징 중 하나가 된다.
+but c#이나 c++같은 클래스기반의 객체지향언어와는 달리 자바스크립트는 프로타입 기반의 객체지향 언어이다.
+프로타입 기반이기 떄문에 상속의 개념이 클래스 기반의 객체 지향 언어와는 약간 다르다.
+자바스크립트에서는 현재 존재하고 있는 객체를 프로토타입으로 사용하여,해당 객체를 복제하여 재사용하는 것을 상속
+이라고 한다.
+
+
+프로토타입
+자바스크립트의 모든 객체는 프로토타입이라는 객체를 가지고 있다.
+모든 객체는 그들의 프로토타입으로부터 프로퍼티와 메소드를 상속받음
+이처럼 자바스크립트의 모든 객체는 최소한 하나이상의 다른 객체로부터 상속을 받으며, 이떄 상속되는 정보를
+제공하는 객체를 프로토타입이라고 한다.
+
+프로토타입 체인
+자바스크립트에서는 객체 이니셜라이저를 사용해 생성된 같은 타입의 객체들은 모두 같은 프로토타입을 가짐
+또한,new연산자를 사용해 생성한 객체는 생성자의 프로토타입을 자신의 프로토타입으로 상속받음
+ex)
+var obj = new Object(); //이 객체의 프로토타입은 Object.prototype이다.
+var arr = new Array(); //이 객체의 프로토타입은 Array.prototype이다.
+new date = new Date(); //이 객체의 프로토타입은 Date.prototype이다.
+
+하지만 Object.prototype객체는 어떠한 프로토타입도 가지지 않으며, 아무런 프로퍼티도 상속받지 않음
+또한,자바스크립트에 내장된 모든 생성자나 사용자 정의 생성자는 바로 이 객체를 프로토타입으로 가짐
+
+ex)
+var date = Date(); // 이 객체는 Date.prototype 뿐만아니라 Object.prototype도 프로토타입으로 가짐 
+
+위와 같이 프로토타입이 상속되는 가상의 연결고리를 프로토타입 체인이라 함 
+Object.prototype 객체는 이러한 프로토타입 체인에서도 가장 상위에 존재하는 프로토타입이다.
+따라서 자바스크립트의 모든 객체는 Object.prototype 객체를 프로토타입으로 상속받음
+
+프로토타입의 생성
+프로토타입을 생성하는 가장 기본적인 방법은 객체 생성자 함수를 작성하는 것 
+생성자 함수를 작성하고 new연산자를 사용해 객체를 생성하면, 같은 프로토타입을 가지는 객체들을 생성할 수 있다.
+
+ex)
+<script>
+function Dog(color,name,age){
+	this.color = color;
+	this.name = name;
+	this.age = age;
+}
+
+var myDog = new Dog("흰색","마루",1); // 이 객체는 Dog라는 프로토타입을 가짐 
+document.write("우리 집 강아지"+myDog);
+</script>
+
+연산자(operator)
+자바스크립트는 여러 종류의 연산을 위한 다양한 연산자(operator)를 제공하고 있다.
+
+
+산술연산자
+산술 연산자는 사칙연산을 다루는 가장 기본적이면서도 많이 사용하는 연산자이다.
+산술 연산자는 모두 두개의 피연산자를 가지는 이항 연산자이며, 피연산자들의 결합 방향은 왼쪽에서 오른쪽 
+
+항이란 해당 연산의 실행이 가능하기 위해 필요한 값이나 변수를 의미함
+따라서 이항 연산자란 해당 연산의 실행을 위해서 두개의 값이나 변수가 필요한 연산자를 의미함 
+
+삼항 연산자(ternary operator)
+삼항 연산자는 유일하게 피연산자를 세 개나 가지는 조건 연산자
+문법]
+표현식 ? 반환값1: 반환값2
+물음표? 앞의 표현식에 따라 결과값이 참이면 반환값1을 반환하고, 결과값이 거짓이면 반환값 2를 반환
+ex)
+var x = 3, y = 5;
+var result =(x > y)? x:y // x가 더크면 x를 그렇지 않으면 y를 반환함
+
+삼항 연산자는 짧은 if/else문 대신 사용할 수 있으며, 코드를 간결하게 만들어줌
+
+쉼표 연산자 
+쉼표 연산자를 for문에서 사용하면, 루프마다 여러 변수를 동시에 갱신할 수 있다.
+ex)
+for(var i =0,j=9; i <= j; i++,j--){
+	document.write(i+"+"+j<br>i+"+""번쨰 입니다.");
+}
+
+삼항 연산자 
+ex)
+표현식? 반환값1:반환값2
+<script>
+var x=3,y=5;
+var result = (x>y)?'x가y보다 더크다.':'y가x보다 더 크다'
+
+document.write(result); // y가x보다 더 크다
+</script>
+
+switch문 
+ex)
+switch(조건 값){
+ case 값1:
+     조건 값이 값1일 때 실행하고자 하는 실행문;
+     break;
+ case 값2:
+     조건 값이 값2일 떄 실행하고자 하는 실행문;
+     break;
+ .....
+    default;
+      조건 값이 어떠한 case 절에도 해당하지 않을 떄 실행하고자 하는 실행문;
+      break;     
+}
+
+default 구문 반드시 존재하는 것은 아니며, 필요할 떄만 선언할 수도 있다.
+각 case절 및 default 절은 반드시 break 키워드를 포함하고 있어야 한다
+break 키워드는 조건 값에 해당하는 case절이나 default 절이 실행된 뒤에 전체 switch문을 빠져나가게 해줌 
+
+반복문(iteration statements)
+반복문이란 프로그램 내에서 똑같은 명령을 일정 횟수만큼 반복하여 수행하도록 제어하는 실행문이다.
+프로그램이 처리하는 대부분의 코드는 반복적인 형태가 많으므로,가장 많이 사용되는 실행문 중 하나 
+
+자바스크립트에서 사용할 수 있는 반복문의 형태는 다음과 같다.
+1.while문  while문은 특정 조건을 만족할 떄까지 계속해서 주어진 실행문을 반복 실행함
+ex)
+while(조건식){
+ 표현식 결과가 참인 동안 반복적으로 실행하고자 하는 실행문;
+}
+
+2.do/while문
+while문은 루프에 진입하기전에 먼저 표현식부터 검사함
+but do/while문은 먼저 루프를 한번 실행한 후에 표현식을 검사함
+즉, do/while문은 표현식의 결과와 상관없이 무조건 한번은 루프를 실행함
+ex)
+do {
+   표현식의 결과가 참인 동안 반복적으로 실행하고자 하는 실행문;
+}while(표현식);
+
+3.for문
+for문은 while문과는 달리 자체적으로 초기식,표현식,증감식을 모두 포함하고 있는 반복문이다.
+따라서 while문보다는 좀 더 간결하게 반복문을 표현할 수 있다.
+for문의 문법
+for(초기식;표현식;증감식){
+ 표현식의 결과가 참인 동안 반복적으로 실행하고자 하는 실행문;
+}
+for문을 구성하는 초기식,표현식,증감식은 각각 생략될 수 있다.
+또한,쉼표 연산자()를 사용하면 여러개의 초기식이나 증감식을 동시에 사용할 수도 있다.
+
+for문을 사용하면 앞선 예제의 while문을 더욱 더 간결하게 표현할 수 있다.
+
+ex)
+for(var i =0; i < 10; i++) {
+ document.write('i값은<br>'+i);
+}
+
+
+4.for/in문
+ex)
+var arr = [3,4,5];
+for(var i in arr){
+  document.write(i);
+}
+ex)2 for/in 문을 사용해서 객체의 프로퍼티에 접근하는 예제
+var obj = { name:'sinwon',age:99};
+
+var(var i in obj){
+  document.write(i+"<br>");
+}
+
+5.for/of문 
+for/of 문은 반복할 수 있는 객체(iterable objects)를 순회할 수 있도록 해주는 반복문입니다.
+
+자바스크립트에서 반복할 수 있는 객체에는 Array,Map,Set,arguments객체 등이 있다.
+이 반복문은 루프마다 객체의 열거 할 수 있는 프로퍼티의 값을 지정된 변수에 대입한다
+문법
+for(변수 or 객체) {
+    객체의 모든 열거할 수 있는 프로퍼티의 개수만큼 반복적으로 실행하고자 하는 실행문;
+}
+ex)
+var arr = [3,4,5];
+for(var i =0; arr.length;i++){
+ document.write(arr[i]);
+}
+for(var value of arr){ // 위와 같은 동작을 하는 for /of문
+ documnet.write(value);
+}
+
+continue문
+continue문은 루프내에서 사용하여 해당 루프의 나머지 부분을 건너뛰고, 바로 다음 표현식의 판단으로 넘어가게 한다.
+보통 반복문 내에서 특정 조건에 대한 처리를 제외하고자 할 떄 자주 사용됨
+자바스크립트에서 continue문은 다음과 같이 두 가지 형태로 사용할 수 있다.
+1.continue;
+2.continue 라벨이름;
+
+ex) 1부터 100까지의 정수 중에서 3의 배수를 제외하고 출력하는 예제
+<script>
+ var exceptNum = 3; 
+for(var i = 0; i<=100; i++){
+  document.write(i%exceptNum ==0)
+  continue; // 해당 조건 맞으면 건너뛰어라
+  document.write(i);
+}
+</scirpt>
+
+배열(array)란?
+자바스크립트에서 배열(array)는 이름과 인덱스로 참조되는 정렬된 값의 집합으로 정의됨 
+배열을 구성하는 각각의 값을 배열 요소(element)라고 하며, 배열에서의 위치를 가리키는 숫자를 인덱스(index)라고 한다.
+
+자바스크립트에서 배열의 특징은 다음과 같다
+
+1.배열 요소의 타입이 고정되어 있지 않으므로, 같은 배열에 있는 배열 요소끼리의 타입이 서로 다를 수 있다.
+2.배열 요소의 인덱스가 연속적이지 않아도 되며, 따라서 특정 배열 요소가 비어 있을수도 있다.
+3.자바스크립트에서 배열은 Array객체로 다뤄짐
+문법
+1.var arr = [배열요소1,배열요소2]; // 배열 리터럴을 이용하는 방법
+2.var arr = Array(배열요소1,배열요소2); // Array 객체의 생성자를 이용하는 방법 
+3.var arr = new Array(배열요소1.배열요소2) // new 연산자를 이용한 Array 객체 생성 방법
+
+배열의 참조 
+자바스크립트에서 배열의 각 요소를 참조하고 싶을떄는 []연산자를 사용한다.
+
+문법 
+배열이름[인덱스]
+
+배열요소 추가 
+자바스크립트에서 배열에 새로운 배열 요소를 추가하는 방법은 다음과 같다
+
+문법
+1.arr.push(추가할 요소); //push()메소드를 이용하는 방법
+2.arr[arr.length] = 추가할 요소; //length 프로퍼티를 이용하는 방법
+3.arr[특정인덱스] = 추가할 요소; // 특정 인덱스를 지정하여 추가하는 방법
+
+push()메소드와 length프로퍼티를 이용한 방법은 모두 배열의 제일 끝에 새로운 요소를 추가함
+
+함수(function)란?
+함수(function)란 하나의 특별한 목적의 작업을 수행하도록 설계된 독립적인 블록을 의미
+이러한 함수는 필요할 때마다 호출하여 해당 작업을 반복해서 수행할 수 있다.
+자바스크립트에서 블록이란 함수나 실행문의 중괄호{}로 묶어진 부분을 가르킴 
+
+자바스크립트 함수 
+자바스크립트에서는 함수도 하나의 타입(datatype)이다.
+따라서 함수를 변수에 대입하거나,함수에 프로퍼티를 지정하는 것도 가능 
+또한,자바스크립트 함수는 다른 함수 내에 중첩되어 정의될 수도 있다.
+
+함수의 정의 
+자바스크립트에서 함수의 정의는 fuction키워드로 시작되며, 다음과 같은 구성요소를 가짐
+1.함수의 이름 
+2.괄호 안에 쉼표,로 구분되는 함수의 매개변수(parameter)
+3.중괄호{}로 둘러싸인 자바스크립트 실행문 
+
+자바스크립트에서 함수를 정의하는 문법은 다음과 같다
+
+function 함수이름(매개변수1,매개변수2){
+    함수가 호출되었을 때 실행하고자 하는 실행문;
+}
+
+함수이름(function name)은 함수를 구분하는 식별자(identifier)이다
+매개변수(parameter)란 함수를 호출할 때 인수(argument)로 전달된 값을 함수 내부에서 사용할 수 있게
+해주는 변수이다.
+함수의 인수(argument)란 함수가 호출될 떄 함수로 값을 전달해주는 변수나 상수를 의미한다.
+
+반환(return)문 
+자바스크립트에서 함수는 반환(return)문을 포함할 수 있다.
+이러한 반환문을 통해 호출자는 함수에서 실행된 결과를 전달받을 수 있다.
+
+반환문은 함수의 실행을 중단하고, return키워드 다음에 명시된 표현식의 값을 호출자에게 반환한다
+반환문은 배열이나 객체를 포함한 모든 타입의 값을 반환할 수 있다.
+
+함수의 호출 
+정의된 함수는 프로그램 내에서 호출되어야 비로서 실행된다.
+일반적인 함수의 호출은 함수의 정의문과 같은 형태로 호출될 수 있다.
+
+값으로서의 함수 
+자바스크립트에서 함수는 문법적 구문일뿐만 아니라 값(value)이기도 하다.
+따라서 함수가 변수에 대입될 수도 있으며, 다른 함수의 인수로 전달될 수도 있다.
+
+변수의 유효범위(variable scope)
+자바스크립트에서 객체나 함수는 모두 변수(variable)이다.
+변수의 유효 범위(scope)란 해당 변수가 접근할 수 있는 변수,객체 그리고 함수의 집합을 의미 
+
+자바스크립트에서 변수는 유효 범위에 따라 다음과 같이 구분됨
+1.지역 변수(local variable)
+2.전역 변수(global variable)
+
+지역 변수(local variable)
+지역 변수(local variable)란 함수 내에서 선언된 변수를 가리킨다.
+이러한 지역 변수는 변수가 선언된 함수 내에서만 유효하며,함수가 종료되면 메모리에서 사라짐 
+함수의 매개변수 또한 함수내에서 정의되는 지역 변수처럼 동작함
+ex)
+function localNum(){
+	var num = 10; // 지역 변수 num에 숫자 10을 대입
+	documnet.write(typeof num); // number 타입 
+}
+localNum(); // 함수 localNum()을 호출
+document.write(typeof num) // undefined 나옴 지역변수는 함수내에서만 유효 
+
+전역 변수(global variable)
+전역변수(global variable)란 함수의 외부에서 선언된 변수를 가리킨다.
+이러한 전역 변수는 프로그램의 어느 영역에서나 접근할 수 있으며, 웹 페이지가 닫혀야만 메모리에서 사라짐
+ex)
+var num = 10; 전역 변수 num을 선언 
+function globalNum() {
+   document.write(num);
+   num = 20; // 전역 변수 num을 함수 내부에서 변경함
+}
+globalNum(); // globalNum()메소드 호출하면 10 
+document.write(num); //20
+위의 예제처럼 전역 변수는 함수 외부뿐만 아니라 내부에서도 접근하여 변경할 수 있다.
+함수 내부에서 var키워드를 사용하지 않고 변수를 선언하면,해당 변수는 지역 변수가 아닌 전역 변수로 선언됨
+ex)
+<script>
+function globalNum() {
+   num = 10; // var 키워드를 사용하지 않고 변수num을 선언함 -> var키워드 사용 안하면 전역 변수로 선언된다.
+   document.write("함수 내부에서 변수 num의 값은"+num+"이다.");
+}
+globalNum(); // 10   함수 내부에서 변수 num의 값은
+document.write(num) //10     함수의 호출이 끝난 뒤 변수 num의 값은
+</script>
+또한, 전역 변수와 같은 이름의 지역 변수를 선언하면, 해당 블록에서는 해당 이름으로 지역 변수만을 호출할 수 있다.
+ex)
+<script>
+var num = 10; //함수 밖에서 전역 변수를 선언함
+function globalNum() {
+	var num = 20; //함수내에서 var 키워드 사용해서 같은 이름의 지역변수 num을 선언함
+	document.write(num); //20
+}
+globalNum(); //20
+document.write(num); //10
+<script>
+위의 예제와 같은 경우 해당 블록에서 전역 변수를 호출하려면,전역 변수가 window 객체의 프로퍼티임을 명시하면 됨
+ex)
+<script>
+var num = 10; //전역 변수 num 선언
+function globalNum(){
+	var num = 20; //지역 변수 num 선언
+	documnet.write(num); //20
+	documnet.write(window.num);
+}
+globalNum();   //20 
+               //10
+</script>
+
+함수의 유효 범위(function scope)
+대부분의 프로그래밍 언어에서는 블록 내에서 정의된 변수를 블록 외부에서 접근할 수 없다.
+블록(block)이란 코드 내에서 중괄호{}로 둘러싸인 부분을 가리킴
+이러한 블록을 기준으로 하는 유효 범위를 블록 단위의 유효 범위라고 한다.
+
+하지만 자바스크립트는 다른 언어와는 달리 함수를 블록 대신 사용한다.
+자바스크립트에서 함수는 자신이 정의된 범위 안에서 정의된 모든 변수 및 함수에 접근할 수 있다.
+
+'전역 함수'는 모든 전역 변수와 전역 함수에 접근할 수 있다.
+반면,다른 함수 내에 정의된'내부 함수'는 그 함수의 부모 함수(parent function)에서 정의된 모든 변수 및 
+부모 함수가 접근할 수 있는 모든 다른 변수 까지도 접근할 수 있다.
+ex)
+var x= 10, y = 20; // x,y를 전역변수로 선언함
+function sub(){
+  return x-y; // 전역 변수인 x,y에 접근함
+}
+
+documnet.write(sub()); // -10
+
+//
+function parentFunc(){
+ var x = 1, y = 2; //전역 변수와 같은 이름으로 함수내에서 var키워드 사용하여 전역 범위를 제한함
+ 
+   function add() {
+   	return x+y; // 전역변수가 아닌 지역 변수 x,y에 접근함
+   }
+     return add();
+}
+document.write(parentFunc()); // 3 
+
+매개변수(parameter)
+자바스크립트에서는 함수를 정의할 떄는 매개변수의 타입을 따로 명시하지 않는다.
+함수를 호출할 떄에도 인수(argument)로 전달된 값에 대해 어떠한 타입 검사도 하지 않는다.
+
+함수를 호출할 때 함수의 정의보다 적은 수의 인수가 전달되더라도, 다른 언어와는 달리 오류를 발생시키지 않는다.
+이 같은 경우 자바스크립트는 전달되지 않은 나머지 매개변수에 자동으로 undefined값을 설정함
+매개변수(parameter)란 함수의 정의에서 전달받은 인수를 함수 내부로 전달하기 위해 사용하는 변수를 의미함
+인수(argument)란 함수가 호출될 떄 함수로 값을 전달해주는 값을 말함
+
+arguments 객체
+만약 함수의 정의보다 더 많은 수의 인수가 전달되면,매개변수에 대입되지 못한 인수들은 참조할 방법이 없게 됨
+
+parseInt()함수는 문자열을 파싱하여 정수로 반환
+parseInt("문자열");
+parseInt("123"); // 123
+
+Number()함수는 전달받은 객체의 값을 숫자로 반환
+Number(객체);
+
+this 키워드
+자바스크립트에서 this 키워드는 해당 키워드가 사용된 자바스크립트 코드 영역을 포함하고 있는 객체를 가리킴
+예를 들어, 메소드 내부에서 사용된 this키워드는 해당 메소드를 포함하고 있는 객체를 가리킴
+또한,객체 내부에서 사용된 this 키워드는 객체 그 자신을 가리킴
+이러한 this는 변수가 아닌 키워드이므로, 사용자가 임의로 가리키는 값을 바꿀 수 없다.
+
+객체 프로퍼티의 삭제 
+자바스크립트에서 객체의 프로퍼티를 참조하는 방법은 다음과 같다
+
+문법
+객체이름.프로퍼티이름
+또는 
+객체이름["프로퍼티이름"]
+
+문법 
+delete 객체이름.프로퍼티이름;
+
+delete키워드를 사용하여 프로퍼티를 삭제하면,프로퍼티의 값뿐만 아니라 프로퍼티 그 자체도 삭제됨
+delete 키워드는 본래 객체의 프로퍼티만을 삭제하기 위해 만들어졌기 떄문에 함수나 변수에 사용하면 아무런 동작도 하지 않는다.
+ex)
+function Dog(color,name,age){
+   this.color = color; // this키워드는 해당 키워드가 사용된 자바스크립트 코드 영역을 포함하고 있는 객체를 가리킴
+   this.name = name;
+   this.age = age;
+}
+
+객체프로퍼티와 메소드
+객체프로퍼티(property)
+모든 자바스크립트 객체는 Obejct객체와 Object.prototype 객체의 모든 프로퍼티를 상속받는다 
+prototype 프로퍼티를 이용하면 현재 존재하는 프로토타입에 새로운 프로퍼티나 메소드를 손쉽게 추가할 수 있다.
+
+
+toString()메소드
+toString()메소드는 이 메소드를 호출한 객체의 값을 문자열로 반환
+ex)
+var arr = [10,'문자열',true]; // 배열
+var bool = false; // 불리언
+function func(){return 0;}//함수
+arr.toString(); // 10 ,문자열,true
+bool.toString(); // false
+func.toString(); // 함수의 소스 코드가 전부 문자열로 반환됨
+
+getter와 setter 메소드의 정의
+getter와  setter메소드로 정의된 프로퍼티는 단순한 값을 지닌 데이터 프로퍼티와는 달리 접근자 프로퍼티라고 부른다
+
+getter메소드는 특정 프로퍼티의 값을 받아오기 위한 메소드 이다.
+자바스크립트는 객체의 프로퍼티 값에 접근할때 getter메소드에 아무런 인수를 전달하지 않고 호출 
+
+setter메소드는 특정 프로퍼티의 값을 설정하기 위한 메소드
+자바스크립트는 객체의 프로퍼티 값을 변경할 떄 setter 메소드에 대입하고자 하는 값을 인수로 전달하여 호출 
+getter 메소드를 정의하는 예제
+ex)
+var gildong = {age:18}; // 객체 
+ducumnet.write(gildong.age); // 18 
+
+Object.defineProperty(gildong,"americanAge",{get:function(){retrun this.age-1;}});
+document.write(gildong.americanAge); // 17 
+위의 예제에서는 gildong 객체에 americanAge라는 프로퍼티를 추가할 때 get 키워드를 사용하여 getter 메소드를 정의하고 있다.
+따라서 해당 프로퍼티를 참조하려고 할 떄는 내부적으로 미리 정의한 getter 메소드가 자동으로 호출될 것이다.
+
+전역 객체와 래퍼 객체 
+전역 객체(global object)
+전역 객체란 자바스크립트에 미리 정의된 객체로 전역 프로퍼티나 전역 함수를 담는 공간의 역할을 함
+전역 객체 그 자체는 전역 범위에서 this 연산자를 통해 접근할 수 있다.
+
+자바스크립트에서 모든 객체는 전역 객체의 프로퍼티가 된다.
+웹 브라우저가 새로운 페이지를 로드(load)하면, 자바스크립트는 새로운 전역 개체를 만들고 해당 프로퍼티들을 초기화 한다.
+
+래퍼 객체(wrapper object)
+예제
+var str = "문자열"; // 문자열 생성
+var len = str.length; // 문자열 프로퍼티인 lenth사용 
+위의 예제에서 생성한 문자열 리터럴 str은 객체가 아닌데도 length 프로퍼티를 사용할 수 있다.
+프로그램이 문자열 리터럴 str 참조하려고 하면, 자바스크립트는 new String(str)을 호출한 것처럼 문자열 
+리터럴을 객체로 자동 변환해 주기 떄문
+
+이렇게 생성된 임시 객체는 String 객체의 메소드를 상속받아 프로퍼티를 참조하는데 사용됨 
+이후 프로퍼티의 참조가 끝나면 사용된 임시 객체는 자동으로 삭제됨 
+이렇게 숫자,문자열,불리언 등 원시 타입의 프로퍼티에 접근하려고 할 떄 생성되는 임시 객체를 래퍼 객체라고 한다.
+ex)
+var str = "문자열"; // 문자열 리터럴 생성
+var strObj = new String(str); // 문자열 객체 생성
+str.length; // 리터럴 값은 내부적으로 래퍼 객체를 생성한 후에 length 프로퍼티를 참조함 
+str == strObj // 동등 연산자는 리터럴 값과 해당 래퍼 객체를 동일하게 봄 
+str === strObj // 일치 연산자는 리터럴 값과 래퍼 객체를 구별
+type of str; // string 타입
+type of strObj // object 타입
+
+표준 객체(standard Object)
+자바스크립트에서 표준 객체는 다른 객체의 기초가 되는 핵심적인 객체 
+자주 사용되는 대표적인 자바스크립트 표준객체
+1.Number 객체
+2.Math 객체
+3.Date 객체
+4.String 객체
+5.Array 객체
+
+Nan(Not A Number)는 숫자가 아니라는 의미로,정의되지 않은 값이나 표현할 수 없는 값을 가리킴
+0을 0으로 나누거나,숫자로 변환할 수 없는 피연사자로 산술 연산을 시도하는 경우에 반환되는 읽기 전용 값
+
+ex)
+var x = 100 - "10" // "10은" 자동으로 숫자로 변환되어 계산됨
+var y = 100 - "문자열"; // "문자열"은 숫자로 변환할 수 없기 떄문에 NaN을 반환함
+자바스크립트의 전역 함수 중 하나인 isNaN()함수를 사용하면, 전달받은 값이 숫자인지 아닌지를 판단해 줌
+ex)
+var x = 100 * "문자열";
+if(isNaN(x)){
+	document.write("변수")
+} else {
+   document.write("변수 x의 값은 숫자입니다.");
+}
+자바스크립트에서는 약간은 비슷한 것 같으면서도 전혀 다른 4가지 값을 제공함 
+
+-null은 object타입이며, 아직 값이 정해지지 않은 것을 의미
+-undefined는 null과 달리 하나의 타입이며,'타입'이 정해지지 않은 것을 의미하는 값이기도 함 
+-NaN은 number타입이며, '숫자가 아님'을 의미하는 숫자 
+-infinity는 number 타입이며, 무한대를 의미
+
+toString()메소드 
+이 메소드는 Number 인스턴스의 값을 문자열로 반환한다.
+전달 받은 값에 해당하는 진법으로 우선 값을 변환한 후, 그 값을 문자열로 반환
+
+var num = 255; //Number인스턴스를 생성함 
+
+document.write(num); // 255 
+document.write(num.toString(2)); // 1111111
+document.write(3.14).toString // 3.14
+
+valueOf()메소드 
+이 메소드는 Number 인스턴스가 가지고 있는 값을 반환함
+원형
+numObj.valueOf() 
+
+var numObj  = new Number(123); // 123의 값을 가지고 있는 Number 인스턴스를 생성함 
+
+document.write(numObj.valueOf());
+
+Math 객체
+Math 객체는 수학에서 자주 사용하는 상수와 함수들을 미리 구현해 놓은 자바스크립트 표준 내장 객체 
+Math 객체는 다른 전역 객체와는 달리 생성자가 존재하지 않음 
+따라서 따로 인스턴스를 생성하지 않아도 Math 객체의 모든 메소드나 프로퍼티를 바로 사용할 수 있음 
+
+Math 메소드
+자바스크립트는 웹 페이지에서 수학적 작업을 손쉽게 할 수 있도록 다양한 Math 메소드를 제공하고 있다.
+가장 많이 사용되는 대표적인 Math 메소드는 다음과 같다.
+1.Math.min()
+2.Math.max()
+3.Math.random()
+4.Math.round()
+5.Math.floor()
+6.Math.ceil()
+7.Math.sin()
+
+대부분의 Math 메소드는 웹 브라우저마다 다른 결과값을 얻을 가능성이 높다.
+심지어 같은 자바스크립트 인터프리터라도 운영체제가 다르면 다른 결과값을 반환할 수 있다.
+따라서 아주 정확한 결과값이 필요한 작업에는 Math 메소드는 사용하지 않는것이 좋다.
+
+
+Math.floor()메소드 
+Math.floor()메소드는 인수로 전달받은 값과 같거나 작은 수 중에서 가장 큰 정수를 반환
+ex)
+<script>
+document.write(Math.floor(10.32)); //10 
+</script>
+
+Date 객체
+자바스크립트에서의 날짜 표현
+자바스크립트에서는 Date 객체를 사용하여 매 순간 변화하는 시간과 날짜에 관한 정보를 손쉽게 얻을 수 있다.
+Date 객체는 연월일,시분초의 정보와 함께 밀리초의 정보도 함께 제공한다.
+
+자바스크립트에서 날짜와 시간을 나타내기 위한 값의 범위는 다음과 같다.
+1.연도(year): 1900년(00) ~ 1999년(99)
+2.월(month):1월(0) ~ 12월(11)
+3.일(day):1일(1) ~ 31일(31)
+4.시(hours):0시(0) ~ 23시(230)
+5.분(minutes):0분(0) ~ 59분(59)
+6.초(seconds):0초(0) ~ 59초(59)
+
+자바스크립트에서 월(month)을 나타낼 떄는 1월이 0으로 표현되고,12월이 11로 표현된다는 사실에 유의해야 한다.
+
+Date 객체 
+자바스크립트에서 Date 객체를 초기화하는 방법은 다음과 같음
+1.new Date()
+2.new Date("날짜른 나타내는 문자열")
+3.new Date(밀리초)
+4.new Date(년,월,일,시,분,초,밀리초)
+
+Date 객체를 생성할 떄 어떠한 인수도 전달하지 않으면, 현재 날짜와 시간을 가지고 Date 객체를 생성함
+ex)
+
+var date = new Date(); // Date 객체 생성
+document.write(date);
+
+자바스크립트 날짜 양식(date format)
+자바스크립트에서 날짜를 표현할 수 있는 양식은 다음과 같다.
+
+1.ISO 날짜 양식
+2.Long 날짜 양식
+3.Short 날짜 양식
+4.Full 날짜 양식
+
+Date 메소드
+Date.now()메소드
+Date.now()메소드는 1970년부터 1월1일 0시 0분 0초부터 현재까지의 시간을 밀리초단위의 정수로 반환
+ex)
+var nowTime = new Date.now();
+
+Date.protype getter 메소드
+모든 Date 인스턴스는 Date.protype으로부터 메소드와 프로퍼티를 상속받음
+
+Date.prototype getter 메소드는 날짜와 관련된 정보를 받아오기 위한 메소드
+가장 많이 사용되는 대표적인 getter메소드는 다음과 같다.
+1.getFullYear() 연
+2.getDate() 일
+3.getDay() 월
+4.getTime() 시간
+
+배열을 사용하면 더욱 간단하게 요일을 출력할 수 있다.
+ex)
+
+var date = new Date()//인스턴스 생성 
+var datys = ['일','월','화','수','목','금','토'];
+document.write("오늘은"+days[date.getDay()])+"요일 입니다.");
+
+
+String 객체 
+자바스크립트에서 문자열은 보통 문자열 리터럴을 사용하여 표현함 
+but 문자열을 나타날 떄 new 연산자를 사용하여 명시적으로 String 객체를 생성할 수도 있다.
+이러한 String 객체는 문자열 값을 감싸고 있는 래퍼(Wrapper)객체이다.
+
+String 메소드 
+String 메소드는 String 객체에 정의된 문자열과 관련된 작업을 할 때 사용하는 메소드이다.
+
+String.prototype 메소드
+모든 String 인스턴스는 String.prototype으로부터 메소드와 프로퍼티를 상속받음
+이렇게 상속받은 String.prototype 메소드를 이용하면,다음과 같은 문자열 작업을 할 수 있다.
+
+문자열에서의 위치 찾기 
+다음 메소드는 String인스턴스에서 특정문자나 문자열이 처음으로 등장하는 위치나 마지막으로 등장하는 
+위치를 반환한다.
+-indexOf()
+-IastIndexOf()
+
+문자열 결합 concat() 메소드
+concat()메소드는 String 인스턴스에서 전달받은 문자열을 결합한 새로운 문자열을 반환한다.
+ex)
+var str = '자바스크립트';
+str.concat("컨캣 사용"); //자바스크립트 컨캣 사용 
+
+Array 객체 
+자바스크립트에서 배열(array)은 정렬된 값들의 집합으로 정의되며,Array 객체로 다뤄짐
+
+Array 메소드
+자바스크립트는 사용자가 배열된 관련된 작업을 손쉽게 할 수 있도록 다양한 메소드를 제공함 
+Array메소드는 Array 객체에 정의된 배열과 관련된 작업을 할 떄 사용되는 메소드
+
+1.Array.isArray()
+2.Array.from()
+3.Array.of()
+
+원본 배열을 변경하는 Array.prototype 메소드
+다음 메소드는 원본 배열을 직접 변경하는 메소드
+1.push() 메소드는 하나 이상의 요소를 배열의 가장 마지막에 추가함
+ex)
+var arr = [1,true,'javascritp'];
+arr.push("자바스크립트");
+arr.length; //4 
+
+2.pop()
+pop()메소드는 배열의 가장 마지막 요소를 제거하고, 그 제거된 요소를 반환함 
+var arr = [1,'가',true,'다'];
+arr.pop();
+arr.length; // 3
+
+
+3.shift()
+4.unshift()
+5.reverse()
+6.sort()
+sort()메소드는 해당 배열의 배열 요소들을 알파벳 순서에 따라 정렬함
+
+7.splice()
+
+원본 배열을 반복적으로 참조하는 메소드
+다음 메소드는 원본 배열을 변경하지 않고,반복적으로 참조만 하는 메소드
+1.forEach()
+2.map()
+3.filter()
+4.every()
+5.some()
+6.reduce()
+7.reduceRight()
+8.entries()
+9.keys()
+10.values()
+
+forEach()메소드
+forEach()메소드는 해당 배열의 모든 요소에 대하여 반복적으로 명시된 콜백 함수를 실행함
+
+ex)
+var arr = [1,ture,'javascript'];
+function printArr(value,index){
+	document.write("index요소는 "+index+"value요소 써서 "+value+"이다.<br>");  // 
+}
+
+arr.forEach(printArr); 
+
+map()메소드
+map()메소드는 해당 배열의 모든 요소에 대하여 반복적으로 명시된 콜백함수를 실행한 후, 그 실행 결과를 새로운 
+배열에 담아 반환 
+map 메서드는 다음과 같이 사용함 배열.map((요소,인덱스,배열) = > {return 요소});
+map의 기본 원리는 간단함 반복문을 돌며 배열안의 요소들을 1대1로 짝지어 주는 것이다.
+그래서 이름이 map이다. 매핑한다고 표현함 어떻게 짝지어줄 것인가 정의한 함수를 메서드의 인자로 넣어주면 되는 것 
+
+ex)
+var arr = [1,-2,3,-4];
+// 배열 arr의 각 요소마다 Math.abs()함수가 호출되고 그 결과값이 배열로 저장됨
+var result = arr.map(Math.abs());
+document.write(reuslt); // 
+console.log(result); //  1,2,3,4
+
+문서 객체 모델(DOM)이란?
+문서 객체 모델(DOM,Document Object Model)은 XML이나 HTML 문서에 접근하기 위한 일종의 인터페이스이다.
+이 객체 모델은 문서 내의 모든 요소를 정의하고, 각각의 요소에 접근하는 방법을 제공 
+이러한 DOM은 W3C의 표준 객체 모델이며, 다음과 같이 계층 구조로 표현됨
+
+Documnet
+
+루트요소
+<html>
+<head>     		 <body>요소
+<title>    "href"속성    요소<a>   요소<p>
+텍스트		     텍스트 링크
+
+자바스크립트는 이러한 객체 모델을 이용하여 다음과 같은 작업을 할 수 있다.
+-자바스크립트는 새로운 HTML 요소나 속성을 추가할 수 있다.
+-자바스크립트는 존재하는 HTML 요소나 속성을 제거할 수 있다.
+-자바스크립트는 HTML 문서의 모든 HTML 요소를 변경할 수 있다.
+-자바스크립트는 HTML 문서의 모든 HTML  속성을 변경할 수 있다.
+-자바스크립트는 html 문서의 모든 CSS스타일을 변경할 수 있다.
+-자바스크립트는 HTML 문서에 새로운 HTML이벤트를 추가할 수 있다.
+-자바스크립트는 HTML 문서의 모든 HTML 이벤트에 반응 할 수 있다.
+
+DOM의 종류
+W3C DOM 표준은 세 가지 모델로 구분된다.
+
+1.Core DOM: 모든 문서 타입을 위한 DOM모델
+2.HTML DOM: HTML 문서를 위한 DOM 모델
+HTML DOM은 HTML 문서를 조작하고 접근하는 표준화된 방법을 정의
+모든 HTML 요소는 HTMLDOM을 통해 접근할 수 있다.
+
+3.XML DOM: XML 문서를 위한 DOM모델
+XML DOM은 XML 문서에 접근하여, 그 문서를 다루는 표준화된 방법을 정의함
+모든 XML요소는 XML DOM을 통해 접근할 수 있다
+
+Document 객체
+Document 객체는 웹 페이지 그 자체를 의미한다.
+웹 페이지에 존재하는 HTML 요소에 접근하고자 할 떄는 반드시 Document 객체부터 시작해야 한다.
+
+Document 메소드
+Document 객체는 HTML요소와 관련된 작업을 도와주는 다양한 메소드를 제공한다.
+
+-HTML 요소의 선택
+-HTML 요소의 생성
+-HTML 이벤트 핸들러 추가
+-HTML 객체의 선택
+
+HTML 요소의 선택
+HTML 요소를 선택하기 위해 제공되는 메소드는 다음과 같다.
+
+document.getElementByTagName(태그이름)  해당 태그 이름의 요소를 모두 선택함
+document.getElementById(아이디) 해당 아이디 요소를 선택함
+document.getElementByClassName(클래스이름) 해당 클래스에 속한 요소를 모두 선택함
+document.getElementByName(name속성값) 해당 name 속성값을 가지는 요소를 모두 선택함
+document.querySelectorAll(선택자) 해당 선택자로 선택되는 요소를 모두 선택함
+
+HTML 요소의 생성
+새로운 HTML요소를 생성하기 위해 제공되는 메소드는 다음과 같다.
+document.createElement(HTML요소) 지정된 HTML 요소를 생성함
+document.write(텍스트) HTML 출력 스트림을 통해 텍스트를 출력
+
+HTML 이벤트 핸들러 추가
+HTML요소에 이벤트 핸들러를 추가하기 위해 제공되는 메소드는 다음과 같다.
+ex)
+<body>
+<input type="button" id='clickM' value="클릭">
+</body>
+<script>  스크립트 위치 바디태그 닫는거 아래 할것  안그러면 id 값 못 얻어와서 null뜸
+document.getElementById('clickM').onclick = function(){              description:마우스 클릭 이벤트와 연결될 이벤트 헨들러 코드추가
+	alert('click함');
+}
+<scirpt>
+DOM 요소
+DOM요소의 선택
+HTML 요소를 다루기 위해서는 우선 해당 요소를 선택해야함 
+자바스크립트에서 특정 HTML 요소를 선택하는 방법은 다음과 같다.
+
+1.HTML 태그 이름(tag name)을 이용한 선택
+2.아이디(id)를 이용한 선택
+3.클래스(class)를 이용한 선택
+4.name속성(attribute)를 이용한 선택
+5.CSS 선택자(selector)를 이용한 선택
+6.HTML 객체 집합(object collection)을 이용한 선택
+
+HTML 태그 이름(tag name)을 이용한 선택
+getElementByTagName()메소드는 HTML 태그 이름을 이용하여 HTML요소를 선택
+
+ex)
+var selecteditem = document.getElementByTagName("li"); // 모든 <li>요소 선택
+for(var i = 0; i < selecteditem.length; i++){
+    selecteditem.item(i).style.color = "red"; // 선택된 모든 요소의 텍스트 색상을 변경함 
+}
+
+item()메소드는 해당 HTML 객체 집합(object collection)에서 전달받은 인덱스에 해당하는 요소를 반환한다.
+HTML요소의 스타일 프로퍼티를 이용하면, 해당 요소의  CSS스타일을 변경할 수 있다.
+
+아이디(id)를 이용한 선택
+getElementById()메소드는 아이디를 이용하여 HTML 요소를 선택
+ex)
+
+<script>
+var evens = document.getElementById("even"); // 아이디 'even'인 요소를 선택함
+evens.style.color = "blue";
+</script>
+자바스크립트에서 아이디id를 이용한 선택은 해당 아이디를 가지고 있는 요소 중에서 첫 번째 요소 단 하나만을 선택
+따라서 여러 요소를 선택하고 싶을 떄는 태그 이름이나 클래스와 같은 다른 방법을 사용해야 한다.
+
+class를 이용한 선택
+getElementByClassName()메소드는 클래스 이름을 이용하여 HTML요소를 선택 
+
+ex)
+<body>
+	<ul>
+		<li class="odd">첫 번째 리스트</li>
+	</ul>
+</body>
+<script>
+var odd = document.getElementByClassName('odd');
+for(var s = 0;s<odd.length; s++){
+  odd.item(s).style.color = 'blue';
+}
+</script>
+
+name 속성을 이용한 선택
+getElementByName()메소드는 HTML 요소의 name 속성을 이용하여 HTML요소를 선택함
+ex)
+<body>
+	<ul>
+		<li name="first">첫 번 쨰 </li>
+	</ul>
+</body>
+<script>
+var name = document.getElementByName("first"); // name이 "first"인 모든 요소를 선택함
+for(var i = 0; i <name.length; i++){
+  name.item(i).style.color = 'rightblue';
+}
+</script>
+
+CSS 선택자(selector)를 이용한 선택
+querySelectorAll()메소드는 CSS선택자(아이디,클래스,속성,속성값 등)을 이용하여 HTML요소를 선택함
+
+ex)
+<body>
+	<ul class="odd">odd클래스 li요소</ul>
+	<ul>odd클래스가 아닌 li요소</ul>
+</body>
+<script>
+var odd = docuement.querySelectorAll(li.odd); // li요소중에서 클래스가 'odd'인 요소만 택함
+for(var i = 0; i<odd.length; i++){
+ odd.item(i).style.color = 'blue';
+}
+</scirpt>
+
+HTML 객체 집합(object collection)을 이용한 선택 
+HTML DOM에서 제공하는 객체 집합(object collection)을 이용하여 HTML요소를 선택할 수 있다.
+
+ex)
+var title = document.title // <title>요소를 선택함
+document.write(title);
+
+DOM 요소의 내용 변경
+HTML DOM을 이용하면 HTML 요소의 내용(content)이나 속성값 등을 손쉽게 변경할 수 있다.
+HTML 요소의 내용을 변경하는 가장 쉬운 방법은 innerHTML 프로퍼티를 이용하는 것이다.
+
+ex)
+var text = document.getElementById("text");
+text.innerHTML = '이 문장으로 바꿈';
+
+HTML 요소의 속성 이름을 이용하면 속성값도 변경할 수 있다.
+ex)
+<body>
+	<a id="ptag" href="네이버링크">네이버</>
+	<button onclick="changelink">유튜브로 링크 변경</button>
+	
+	<script>
+	fuction changelink() {
+		var ptag = document.getElementById("ptag");
+		ptag.href = "유튜브링크"; // 해당 요소의 href 속성 변경
+		ptag.innerHTML = '유튜브 링크';
+		}
+	</script>
+</body>
+
+
+DOM 요소의 스타일 변경 
+HTML DOM을 이용하면 HTML요소의 스타일도 손쉽게 변경할 수 있다.
+style 프로퍼티를 이용하면 HTML 요소에 CSS스타일을 적용 
+<body>
+<h1>DOM요소의 스타일 변경</h1>
+<p id="textfont">텍스트 기본 색깔 블랙</p>
+<button onclick="textchange">텍스트 색깔변경</button>
+<script>
+function textchange{
+	var textfontchange = document.getElementById('textfont');
+	textfontchange.style.colr = 'blue';
+	}
+</script>
+</body>
+
+노드(node)
+HTML DOM은 노드(node)라고 불리는 계층적 단위에 정보를 저장하고 있다.
+HTML DOM은 이러한 노드들을 정의하고, 그들 사이의 관계를 설명해 주는 역할을 한다.
+
+HTML 문서의 정보는 노드 트리(node tree)라고 불리는 계층적 구조에 저장됨
+이러한 노드 트리는 노드들의 집합이며,노드 간의 관계를 보여줌
+
+노드 트리는 최상위 레벨인 루트 노드부터 시작하여, 가장 낮은 레벨인 텍스트 노드까지 뻗어 내려옴 
+자바스크립트에서는 HTML DOM을 이용하여 노드 트리에 포함된 모든 노드에 접근할 수 있다.
+
+노드의 종류 
+W3C HTML DOM표준에 따르면,HTML문서의 모든것은 노드
+
+노드로의 접근 
+노드로의 접근 
+HTML문서에서 HTML DOM노드에 접근하는 방법은 다음과 같다 
+1.getElementsByTagName()메소드를 이용하는 방법
+2.노드 간의 관계를 이용하여 접근하는 방법
+
+getElementBytagName()메소드를 이용하는 방법
+getElementsByTagName()메소드는 특정 태그 이름을 가지는 모든 요소를 노드 리스트의 형태로 반환함
+따라서 이 메소드가 반환하는 노드 리스트를 이용하면 원하는 노드에 접근할 수 있다.
+
+노드 간의 관계를 이용하여 접근하는 방법
+HTML DOM에서 노드 간의 관계는 다음과 같은 프로퍼티로 정의된다.
+1.parentNode : 부모 노드
+2.childNodes:자식 노드 리스트
+3.firstChild: 첫 번쨰 자식 노드
+4.lastChild: 마지막 자식노드
+5.nextSibling:다음 형제 노드
+6.previousSibling:이전 형제 노드
+
+노드에 대한 정보 
+노드에 대한 정보는 다음과 같은 프로퍼티를 통해 접근할 수 있다
+1.nodeNmae
+2.nodeValue
+3.nodeType
+
+이 프로퍼티들은 특별히 다른 인터페이스를 이용하지 않고도,해당 노드의 정보에 직접 접근할수 있는 방법을 제공한다.
+nodeName
+nodeName은 프로퍼티는 노드 고유의 이름을 저장하므로,수저할 수 없는 읽기 전용 프로퍼티이다.
+요소 노드의 nodeName프로퍼티는 언제나 해당 HTML요소의 태그 이름을 대문자로 저장
+
+문서노드document node #document
+요소노드element node 태그이름
+속성 노드attribute node  속성이름
+텍스트 노드 text node    #text
+
+ex)
+//HTML 문서의 모든 자식 노드 중에서 두 번 째 노드의 이름을 선택함
+document.getElemnetById("docuemnt").innerHTML = document.childNode[1].nodeName; //HTML
+
+//HTML 노드의 모든 자식 노드 중에서 첫 번째 노드의 이름을 선택함.
+docuemnt.getElementById("html").innerHTML = document.childNodes[1].childNodes[0].nodeName; // HEAD
+
+nodeValue
+nodeValue 프로퍼티는 노드의 값을 저장함
+  노드			
+element node    undefined
+attribute node    해당 속성의 속성값
+text node       해당 텍스트 문자열
+
+
+//예제
+아이디가 'heading'인 요소의 첫 번째 자식 노드의 노드값을 선택함
+<body>
+<p id="textp">p내용 </p>
+<p id="text1">내용 변경</p>
+</body>
+<script>
+var headingText = document.getElementById('textp').firstChild.nodeValue;
+document.getElementById('text1').firstChild.nodeValue = headingText;
+</script>
+
+빈 텍스트 노드의 처리
+현재 대부분의 주요 웹 브라우저는 모두 W3C DOM 모델을 지원하지만, 그 처리 방식에 있어 약간씩의 차이가 있다.
+그중에서도 가장 큰 차이점은 띄어쓰기와 줄 바꿈을 처리하는 방식이다.
+파이어 폭스나 기타 브라우저들은 띄어쓰기나 줄 바꿈을 텍스트 노드(text node)로 취금함
+하지만 익스플로러는 띄어쓰기나 줄 바꿈을 텍스트 노드로 취급하지 않는다.
+따라서 자식 노드나 형제 노드를 이용하여 원하는 노드에 접근하려고 하면 브라우저 간에 차이가 발생함
+이 차이를 가장 없애는 가장 쉬운 방법은 nodeType프로퍼티를 사용하여 선택된 요소의 타입을 검사하는 것
+
+노드 리스트(node list)
+노드 리스트는 getElementByTagName()메소드나 childNodes 프로퍼티의 값으로 반환되는 객체 
+이 객체는 HTML문서와 같은 순서로 문서 내의 모든 노드를 리스트 형태로 저장하고 있다.
+ex)
+// 아이디가 "list"인 요소의 모든 자식 노드들을 선택함
+var listItems =  document.getElementById("list").childNodes;
+// 
+listItems[1].firstChild.nodeValues = "HTML 요소의 내용을 변경함";
+
+노드의 추가 
+다음 메소드를 사용하면 특정 위치에 새로운 노드를 추가할 수 있다.
+
+1.appendChild()
+2.insertBefore()
+3.insertDate()
+
+appendChild()메소드
+appendChild()메소드는 새로운 노드를 해당 노드의 자식 노드 리스트의 맨 마지막에 추가함
+ex)
+<body>
+	<li id="addlist">4<li>
+	<div>
+		<ul id="list">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</div>
+	<button onclick="listadd()">list 노드 추가하기</button>
+</body>
+<script>
+function listadd(){
+	var list = document.getElementById('list');
+	var addlist = document.getElementById('addlist');
+	list.appendChild(addlist);
+}
+</script>
+요소에 id값 붙이고 id값으로 접근하여 부모 노드쪽에 appendChild()메소드 사용하여 추가해주는 형식
+
+insertBefore()메소드
+insertBefore()메소드는 새로운 노드를 특정 자식 노드 바로 앞에 추가 함
+insertBefore()메소드의 원형은 다음과 같다.
+원형
+부모노드.insertBefore(새로운자식노드,기준자식노드);
+
+1.새로운 자식 노드:자식 노드 리스트(child node list)에 새롭게 추가할 자식 노드를 전달함
+2.기준 자식 노드:새로운 노드를 삽입할 때 기준이 되는 노드로,이 노드 바로 앞에 새로운 노드가 추가됨
+ex)
+<body>
+	<h1>노드기준점으로 자식노드 앞 추가하는 insertBefore()메소드 사용하기</h1>
+	<li id="addcontent">추가할 내용</li>
+	<ul id="list">
+		<li>1</li>
+		<li id="childNodeposition">2</li>
+		<li>3</li>
+	</ul>
+	<button onclick="">부모기준 자식노드앞 추가</button>
+</body>
+<script>
+	function addNode(){
+		var list = document.getElementById('list'); // id가 list인 요소를 선택
+		var childNode = document.getElementById("childNodeposition"); //id가 childNodeposition인 요소를 선택
+		var addcontent = document.getElementById('addcontent'); // id가 addcontent인 요소를 선택
+		list.insertBefore(addcontent,childNode);
+	}
+</script>
+result
+1
+추가할 내용
+2
+3
+
+insertData()메소드
+insertData()메소드는 텍스트 노드의 텍스트 데이터에 새로운 텍스트를 추가함
+insertData()메소드의 원형은 다음과 같다.
+원형
+텍스트노드.insertData(오프셋,새로운데이터);
+
+1.오프셋(offset):오프셋 값은 0부터 시작하며, 기존 텍스트 데이터의 몇 번쨰 위치부터 추가할지를 전달
+2.새로운 데이터:새로이 삽입할 텍스트 데이터를 전달함
+ex)
+<body>
+<p id="today">오늘은</p>
+<button onclick="">날짜 시간 추가하기</button>
+</body>
+<script>
+var date = new Date(); // 인스턴스 생성
+function adddate(){
+  var ptext =document.getElementById="today">
+  ptext.insertDate(4,date);  // 4번째 글자에 date가 추가됨
+}
+</script>
+
+노드의 생성
+생성할 노드의 종류에 따라 다음과 같은 메소드를 사용할 수 있다.
+1.createElement()
+2.createAttribute()
+3.createTextNode()
+
+요소 노드의 생성
+createElement()메소드를 사용하여 새로운 요소 노드를 만들 수 있다.
+
+속성 노드의 생성
+createAttribute() 메소드를 사용하여 새로운 속성 노드를 만들 수 있다.
+만약 같은 이름의 속성 노드가 이미 존재하면,기존의 속성 노드는 새로운 속성 노드로 대체됨
+이미 존재하는 요소 노드에 속성 노드를 생성하고자 할 떄에는 setAttribute()메소드를 사용할 수 있다.
+
+노드의 제거 
+다음 메소드를 사용하면 특정 노드를 제거 할 수 있다.
+1.removeChild()
+2.removeAttribute()
+
+노드의 값 변경
+nodeValue 프로퍼티를 사용하면 특정 노드의 값을 변경할 수 있다.
+또한,setAttribute()메소드는 속성 노드의 속성값을 변경할 수 있게 해준다.
+
+요소 노드의 텍스트 
+요소 노드는 자신이 직접 텍스트값을 가지지는 않는다.
+요소 노드의 텍스트는 요소 노드의 자식 노드인 텍스트 노드에 저장된다.
+따라서 요소 노드의 텍스트 값을 확인하거나 변경하고자 할 때는 요소 노드에 포함된 텍스트 노드에 접근해야 한다.
+
+텍스트 노드의 값 변경
+nodeVlalue 프로퍼티를 사용하여 텍스트 노드의 값을 변경할 수 있다.
+ex)
+<body>
+<p id="textp">텍스트</p>
+<button onclick="changenode()">텍스트 노드의 값 변경</button>
+
+<body>
+<script>
+function changenode(){
+	var textp = document.getElementById("textp");
+	textp.firstChild.nodeValue="data변경 됨";
+}
+</script>
+
+속성 노드의 값 변경 
+속성 노드는 nodeValue프로퍼티뿐만 아니라 setAttribute()메소드를 사용하여 값을 변경할 수 있다.
+setAttribute()메소드는 속성값을 변경하려는 속성이 존재하지 않으면, 먼저 해당 속성을 생성한 후에 속성값을 설정
+ex)
+<style>
+	.para {
+		background-color: orange;
+	}
+<style>
+<body>
+<p>여기에 클래스 적용 속성값 변경</>
+<button onclick="changeAttribute()">속성 변경</button>
+</body>
+<script>
+var para;
+
+function changeAttribute(){
+document.getElementsByTagName("p")[0].setAttribute("class","para");
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+이 내용의 원내용의 저작권은 TCP스쿨입니다.  TCP스쿨을 보고  개인적으로 정리해서 보려고 작성한 내용 입니다. 
 
 
