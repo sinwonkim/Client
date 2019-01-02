@@ -13,7 +13,9 @@ section {
   display: -webkit-flex;
   display: flex;
 }
-
+.pp {
+	font-color:black;
+}
 
 nav {
   -webkit-flex: 1;
