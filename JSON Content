@@ -172,6 +172,31 @@ JSON.stringify(value)
 value에는 변환할 자바스크립트 객체를 전달함 
 이 메소드는 UTF-16으로 인코딩된 JSON형식의 문자열을 반환
 
+ex)
+<body>
+<p id="json"></p>
+</body>
+
+<script>
+var car = {name:"자동차",price:1000,age:1}; // javascript object 
+
+var data = JSON.stringify(car);
+document.getElementById("json").innerHTML = data;
+</script>
+
+결과값
+{"name":"자동차","price":1000,"age":1}   json형태로 반환해줌
+
+JSON.parse(); // JSON 형식의 문자열을 자바스크립트 객체로 변환함 
+
+PHP는 서버측에서 실행되는 스크립트 언어
+PHP는 개발자가 동적으로 웹 페이지를 쉽고 빠르게 만들 수 있도록 도와줌
+이떄 서버로부터 읽어들이는 데이터로 JSON데이터가 많이 사용됨
+
+따라서 PHP를 사용하여 JSON데이터를 다뤄야 할 필요성 생김
+PHP는 이러한 JSON데이터를 다루기 위해 메소드 제공함
+1.json_encode()
+2.json_decode()
 
 
 
@@ -208,5 +233,4 @@ value에는 변환할 자바스크립트 객체를 전달함
 
 
 
-
-
+이 내용은 tcp스쿨을 보고 개인적으로 정리한 내용 입니다.
