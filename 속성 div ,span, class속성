@@ -1,0 +1,24 @@
+HTML 태그 중 의미 없는 요소인 div와 span  이 요소들을 활용할 수 있는 클래스 속성
+class와 id속성의 차이점은 무엇인지,네이밍, 이름짓기 
+
+div,span 요소는 아무런 의미를 가지고 있지 않음 
+이 의미없는 요소는 필요에 따라 그룹을 만들거나,css로 조절하기 위해서 사용함 
+
+div : 블럭요소  레이아웃 잡는 용도로 많이 씀 
+span : 인라인요소 
+
+class 속성은 원하는 이름을 넣고 css에서 그 class이름을 선택자로 사용함  
+ex)
+<style>
+.Hi{
+  color:red;
+}
+
+</style>
+
+<sapn class="Hi">Hello</span>
+
+참고 Class 속성은 아이디(id)속성과 같이 모든 요소에 사용 가능한 속성임 
+또한 class 이름은 한 요소에 여러개를 넣을 수 있음 값은 띄어쓰기로 구분함 
+
+<div class="Hi test">한 요소에 클래스 2개 </div>
